@@ -18,12 +18,42 @@
     <!-- endbuild -->
   </head>
   <body ng-app="carbonmapApp">
+
+
+
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+    <nav class="navbar navbar-inverse" role="navigation">
+     <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+  
+
+
     <div class="container" ng-view=""></div>
+<div class="container">
+        <div class="footer row">
+      <div class="col-md-9 col-md-push-3" id="sponsors">
+        
+        <h4>Our Sponsors</h4>
+        <img  src="images/sponsors/bullfrog.gif">
+        <img  src="images/sponsors/kedco.jpg">
+        <img  src="images/sponsors/kingston.jpg">
+        <img  src="images/sponsors/switch.jpg">
+         <img  src="images/sponsors/carbonSavings.png">
+      </div>
+
+    </div>
+</div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -61,6 +91,9 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/async-load/load.js"></script>
+    <script src="bower_components/dom-class/class.js"></script>
+    <script src="bower_components/typekit-load/load.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

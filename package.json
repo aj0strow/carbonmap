@@ -1,7 +1,9 @@
 {
   "name": "carbonmap",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "bower-requirejs": "^0.10.3"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
@@ -30,7 +32,10 @@
     "karma-ng-scenario": "^0.1.0",
     "grunt-karma": "^0.8.3",
     "karma": "^0.12.14",
-    "karma-ng-html2js-preprocessor": "^0.1.0"
+    "karma-ng-html2js-preprocessor": "^0.1.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "bower": "^1.3.3",
+    "grunt-bower-requirejs": "^0.10.0"
   },
   "engines": {
     "node": ">=0.10.0"

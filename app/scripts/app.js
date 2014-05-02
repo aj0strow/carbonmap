@@ -1,5 +1,7 @@
 'use strict';
 
+window.typekitLoad( 'gci4xol' );
+
 angular
   .module('carbonmapApp', [
     'ngCookies',
