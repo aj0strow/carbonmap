@@ -1,15 +1,14 @@
 'use strict';
 
 window.typekitLoad( 'gci4xol' );
-
-angular
-  .module('carbonmapApp', [
+var energyMap = angular.module('energyMap',[
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngRoute'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+energyMap.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
