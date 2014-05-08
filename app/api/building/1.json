@@ -1,8 +1,9 @@
 {
 	id:1, 								// int
 	name:'The Commoner', 				// varchar
-	imageThumbnail: 'the-commoner.jpg'	// varchar
-	imageLarge: 'the-commoner-large.jpg'	// varchar
+	imageThumbnail: 'the-commoner.jpg',	// varchar
+	imageLarge: 'the-commoner-large.jpg',// varchar
+	description: 'Description of the space goes here', // text
 	address: {
 		streetName: 'Pleasant Ave.',	// varchar
 		streetNumber: '85', 			// varchar

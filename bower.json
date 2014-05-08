@@ -11,7 +11,9 @@
     "angular-cookies": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
-    "typekit-load": "~0.1.2"
+    "typekit-load": "~0.1.2",
+    "underscore": "~1.6.0",
+    "angular-underscore-module": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",

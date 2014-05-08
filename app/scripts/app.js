@@ -5,7 +5,8 @@ var energyMap = angular.module('energyMap',[
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'underscore'
   ]);
 
 energyMap.config(function ($routeProvider) {

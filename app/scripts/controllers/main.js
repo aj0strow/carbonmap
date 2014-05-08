@@ -10,16 +10,25 @@ energyMap.factory('buildingsFactory', function($http) {
   };
 });
 
-energyMap.controller('MainCtrl', ['$scope', 'buildingsFactory' ,function ($scope, buildingsFactory) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+energyMap.controller('MainCtrl', ['$scope', 'buildingsFactory', '_', function ($scope, buildingsFactory, _) {
+
+    console.log(_);
+
+    $scope.buildings = {};
+
 
     buildingsFactory.getBuildings(function(results) {
-	    $scope.buildings = results;
+	    
+      results = _.sortBy(results, function(result) {
+        //element will be each array, so we just return a date from first element in it
+        return result.savings.lastMonth;
+      });
+
+      console.log(results);
+      $scope.buildings = results;
+
 	  });
+
   }]);
 
 
