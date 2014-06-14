@@ -6,16 +6,60 @@ var energyMap = angular.module('energyMap',[
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'underscore'
+    'ngAnimate',
+    'underscore',
+    'ngFitText',
+    'ui.router',
+    'slugifier',
+    'google-maps'
   ]);
 
-energyMap.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+energyMap.config(function ($stateProvider, $urlRouterProvider) {
+     $urlRouterProvider.otherwise("/")
+
+    $stateProvider
+    .state('map', {
+      url: "/",
+      views: {
+        "map": { templateUrl: "partials/map.html",
+                  controller:"MainCtrl"
+              }
+      }
+    })
+
+    $stateProvider
+    .state('map.building', {
+      views: {
+        "building": 
+          {
+            templateUrl: "partials/building.html",
+            controller: "BuildingCtrl"
+          }
+      },
+      url: "building/:id"
+    })
+
+    $stateProvider
+    .state('map.whatIsCarbonSavings', {
+      views: {
+        "whatIsCarbonSavings": 
+          {
+            templateUrl: "partials/whatIsCarbonSavings.html"
+          }
+      },
+      url: "what-is-carbon-savings"
+    })
+
+    $stateProvider
+    .state('map.about', {
+      views: {
+        "about": 
+          {
+            templateUrl: "partials/about.html",
+          }
+      },
+      url: "about"
+    })
+
   });
+

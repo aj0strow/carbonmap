@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="energyMap">
+  <body ng-app="energyMap" id="state-{{$state.current.name | slugify}}">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -25,29 +25,120 @@
 
     <!-- Add your site or application content here -->
 
-    <nav class="navbar navbar-inverse" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <ul class="nav nav-pills pull-right"> 
-          <li><a href="#">&nbsp;</a></li>
-          <!-- <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#">About</a></li>
-          <li><a ng-href="#">Contact</a></li> -->
+          <li><a ui-sref="map.about"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;About this Map</a></li>
+          <li><a ui-sref="map.whatIsCarbonSavings"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;What is Carbon Savings?</a></li>
       </ul> 
     </nav>
 
-    <div class="container" ng-view=""></div>
-      <div class="container">
-        <div class="footer row">
-          <div class="col-md-9 col-md-push-3" id="sponsors">
-            <h4>Our Awards</h4>
-            <img  src="images/sponsors/bullfrog.gif">
-            <img  src="images/sponsors/kedco.jpg">
-            <img  src="images/sponsors/kingston.jpg">
-            <img  src="images/sponsors/switch.jpg">
-            <img  src="images/sponsors/carbonSavings.png">
-          </div>
+      <footer class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="row">
+        <div class="col-sm-10 col-sm-push-1 col-sm-pull-1">
+          <ul class="nav nav-pills nav-justified"> 
+              <li><h4>Our Awards</h4></li>
+
+              <li><img src="images/sponsors/bullfrog.gif"></li>
+              <li><img src="images/sponsors/kedco.jpg"></li>
+              <li><img src="images/sponsors/kingston.jpg"></li>
+              <li><img src="images/sponsors/switch.jpg"></li>
+              
+          </ul> 
         </div>
       </div>
+    </footer>
+
+      
+      <div id="mainPanel" class="col-sm-4" ng-controller="MainCtrl">
+
+          <div class="row">
+            <img class="col-sm-6 col-sm-push-3 " id="logo" src="../images/logoKingstonHousing.png">
+            </div> 
+
+        <div class="row">
+
+       <div class="masthead col-sm-12">
+        
+        <h3 class="divider">Electricity saved <br /><small>since September 2005</small></h3>
+        <h4 id="reductionPercent">2.5<sup>%</sup></h4>
+
+        <h3 class="divider">Total Savings <small>since September 2005</small></h3>
+        <h4>{{ savingsOverview.fiveYear | intCurrency }}</h4>
+        
+
+
+        <h3 class="divider">Best-Performing Co-Ops <small>This Week</small></h3>
+        <br class="clearfix" />
+        </div>
+      </div>
+      <div class="row">
+
+
+      <div class="col-sm-6 buildingFeature" ng-repeat="building in buildings | orderBy:'-savings.lastMonth' | limitTo:2 ">
+
+
+     
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1 building">
+          <h6>
+            <span class="glyphicon glyphicon-map-marker"></span>
+            {{ building.name }} 
+            
+          </h6>
+
+          <div class="buildingBackground" style="background:url(images/buildings/{{ building.imageThumbnail }}); background-size:cover">
+            <div class="buildingOverlay">
+
+              <output>{{ building.savings.lastMonth }}<sup>%</sup></output>
+
+              <img width="100%" height="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" />
+            </div>
+          </div>
+          
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-sm-12"><hr class="divider" /></div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+            <section class="callout">
+              <h6>Powered By</h6>
+              <img src="images/sponsors/carbonSavings.png">
+            </section>
+          </div>
+        </div>
     </div>
+
+
+            
+
+       </div>
+       </div>
+
+
+  <section ui-view="map">
+    
+  </section>
+
+<div>
+
+
+
+
+
+
+
+
+
+
+    <!-- We'll also add some navigation: -->
+    </div>
+      
+      
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -64,6 +155,8 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -90,12 +183,19 @@
     <script src="bower_components/typekit-load/load.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+    <script src="bower_components/ngFitText/ng-FitText.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/hoverintent/jquery.hoverIntent.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-slugify/angular-slugify.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/map.js"></script>
+        <script src="scripts/controllers/buildingCtrl.js"></script>
         <!-- endbuild -->
 </body>
 </html>

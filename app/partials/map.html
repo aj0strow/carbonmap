@@ -1,0 +1,70 @@
+
+
+
+
+  <div class="col-sm-8">
+    
+   
+
+    <div class="row" id="map">
+
+   
+     <div class="col-sm-12">
+
+      <div class="col-sm-8" id="intro">
+            <h1>The Kingston Co-Op Energy Map</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+            </div>
+     
+    <google-map  center="map.center" zoom="map.zoom" draggable="true" events="map.events" options="map.options">
+
+
+
+    </google-map>
+
+    <legend>
+
+    <h6>Weekly Electricity Savings (%)</h6>
+    <span class="glyphicon glyphicon-map-marker green"></span>Conserved&nbsp;&nbsp;
+  <span class="glyphicon glyphicon-map-marker red"></span>Increased&nbsp;&nbsp;
+  <span class="glyphicon glyphicon-map-marker grey"></span>No Change&nbsp;&nbsp;
+  <br />
+    <small><em>Source: <br />Utilities Kingston</em></small>
+
+    </legend>
+
+    <section id="building">
+      <div ui-view="building"></div>
+    </section>
+
+
+    <section id="about">
+      <div ui-view="about"></div>
+    </section>
+
+     <section id="whatIsCarbonSavings">
+      <div ui-view="whatIsCarbonSavings"></div>
+    </section>
+
+      <!-- 
+      <div class="marker" ng-repeat="building in buildings">
+       
+        <div class="marker glyphicon glyphicon-map-marker" ng-class="{ 'red': building.savings.lastMonth < 0 , 'green': building.savings.lastMonth > 0 , 'gray': building.savings.lastMonth == 0 }" style="font-size:{{ abs(building.savings.lastMonth)*10 + 20}}px">
+
+        </div>
+
+      </div>
+
+      ng-repeat map markers -->
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+

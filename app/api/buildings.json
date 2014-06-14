@@ -11,11 +11,11 @@
 		country: 'Canada', 				// varchar
 	},
 	coordinates: {
-		latitude: '44.263565',			// float
-		longitude: '-76.50336',			// float
+            latitude: 44.233333,
+            longitude: -76.5		// float
 	},
 	savingsOverview: {
-		fiveYear: '200000' ,			// int, 	($ savings, 5 year)
+		fiveYear: '79,340' ,			// int, 	($ savings, 5 year)
 		lastMonth: '0.4',				// float	(percentage saved last month)
 	}
 },
@@ -32,11 +32,11 @@
 		country: 'Canada', 
 	},
 	coordinates: {
-		latitude: '44.263560',
-		longitude: '-76.50337'	
+            latitude: 44.232,
+            longitude: -76.5
 	},
 	savingsOverview: {
-		fiveYear: '2223290' ,
+		fiveYear: '79,340' ,
 		lastMonth: '3.1',
 	}
 },
@@ -53,8 +53,8 @@
 		country: 'Canada'
 	},
 	coordinates: {
-		latitude: '44.263561',
-		longitude: '-76.50336'
+            latitude: 44.233333,
+            longitude: -76.5004
 	},
 	savingsOverview: {
 		fiveYear: '730249' ,

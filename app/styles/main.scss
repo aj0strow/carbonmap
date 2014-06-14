@@ -2,14 +2,25 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // Colours
 
-$colorGreen: rgb(22,149,58);
+$colorRed: rgb(255,41,50);
+$colorRedLight: #D82D35;
+$colorRedLighter: #F7676E;
+$colorGreen: #97c545;
+$colorGreenLight: #90C237;
+$colorGreenLighter: #99CC3F;
+
+$colorBlue: #428bca;
+$colorBlueLight: #5aa1df;
+$colorBlueLighter: #82b9e9;
+
+$colorGray: rgb(80,80,80);
+$colorGrayLight: rgb(90,90,90);
+$colorGrayLighter: rgb(100,100,100);
 $colorGreenDark: rgb(87, 168, 91);
 // Fonts
 $fontCarbonSavings: "letter-gothic-std";
 $fontSansSerif: "ddt";
 $fontSerif: "minion-pro";
-
-
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
@@ -21,21 +32,326 @@ $fontSerif: "minion-pro";
     color: #000;
     padding: 0.2em 0;
 }
-
+html {
+    height:100%;
+}
 /* Space out content a bit */
 body {
-    padding-bottom: 20px;
-    background:url(../images/backgroundHeader.png) top center repeat-x;
+    height:100%;
+    background:#97c545;
     font-family: $fontSerif;
+    min-width:1024px;
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 
 .navbar {
     border:none;
     border-radius:0px;
-    min-height:0px
+    min-height:0px;
+    margin-top:0;
+    margin-bottom:0px !important;
+    height:40px;
+    & li a {
+        color:white;
+        font-family:'minion-pro';
+        letter-spacing:1px;
+        font-size:14px;
+        &:hover {
+            color:rgb(137,202,146);
+            background:none;
+        }
+    }
 }
+.navbar-fixed-bottom {
+    background:white;
+    height:10%;
+    width: 66.666667%;
+    right: 0px !important;
+    left: auto;
+}
+#logo {
+    margin:20px 0;
+    margin-bottom:-30px;
+    background: white;
+    border-radius: 10000px;
+    padding: 25px;
+    position:relative;
+    z-index: 100000000;
+}
+
+body #mainPanel {
+    transition:1s opacity linear
+}
+body#state-mapbuilding #mainPanel {
+}
+body#state-map #mainPanel {
+}
+
+#mainPanel {
+    background:rgb(151,197,69);
+    text-shadow:0px 1px 0px rgba(255,255,255,0.3);
+    & hr {
+        margin:0;
+    }
+}
+#intro {
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.divider {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-family:'minion-pro';
+    display:block;
+    margin-top:10px;
+}
+#mainPanel .building hr.divider {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin:10px 0;
+    padding:0;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-family:'minion-pro';
+    display:block;
+}
+
+.masthead {
+
+    margin:10px 0;
+
+    & hr {
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    & h3 {
+        font-size:20px;
+        text-align:center;
+        font-family:'minion-pro';
+        text-transform:uppercase;
+        letter-spacing:3px;
+        display:block;
+        width:100%;
+        margin-bottom:0;
+        & small {
+            opacity: 0.2;
+            margin-top: 5px;
+            font-style: italic;
+            line-height: 4px;
+            font-size:11px;
+        }
+    }
+    & h4 {
+        font-size:60px;
+        font-family:'ddt';
+        font-weight:600;
+        text-align:center;
+        color:white;
+        position:relative;
+        text-shadow:0px 3px 6px rgba(0,0,0,0.1);
+        margin-bottom:0;
+        & span {
+            opacity:0.5;
+        }
+        &#reductionPercent {
+            font-size:100px;
+            font-family:'ddt';
+            font-weight:600;
+            text-align:center;
+            color:white;
+            position:relative;
+            margin:10px 0 0 0;
+
+            text-shadow:0px 3px 6px rgba(0,0,0,0.1);
+        }
+            & sup {
+            font-size:30px;
+            position: absolute;
+            top:30px;
+            opacity:0.5;
+        }
+    }
+    & small {
+        text-align:center;
+        font-family:'minion-pro';
+        text-transform:uppercase;
+        letter-spacing:3px;
+        display:block;
+        width:100%;
+        color:black;
+    }
+    & small:first-of-type {
+        padding-top:0px;
+    }
+
+}
+
+.buildingFeature {
+    padding-bottom:30px;
+    text-align:center;
+    white-space:nowrap;
+    border-radius:10px;
+
+    & .building {
+
+        background:white;
+        color:black;
+        border-radius: 14px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+        border-top:1px solid #ddd;
+        padding:0px 10px 10px 10px;
+
+        & .glyphicon {
+        color: black;
+        opacity: 0.4;
+        margin-top: 3px;
+        margin-left: 4px;
+        }
+        & h6 {
+            font-family:'minion-pro';
+            text-align:center;
+            letter-spacing:1px;
+            text-transform: uppercase;
+            color:black;
+            margin-left:-5px;
+
+        }
+
+        & .savings {
+            font-family:'minion-pro';
+            text-transform:uppercase;
+            letter-spacing:1px;
+            margin-top:4px;
+            & output {
+                font-family:'ddt';
+                letter-spacing:0px;
+                padding-top:0;
+                font-weight:bold;
+            }
+        }
+        & .buildingBackground {
+            border-radius:1000px;
+            width:80%;
+            margin:0 auto;
+            position:relative;
+            z-index:1;
+            margin-bottom:5px;
+            
+            & .buildingOverlay {
+
+                border: 7px solid rgba(255,255,255, 0.3);
+                border-radius: 1000px;
+                position: relative;
+                margin-bottom: 8px;
+                background: rgba(151, 197, 69, 0.7);
+                transition:0.5s opacity ease-in-out;
+
+                &.green {
+                    background: rgba(151, 197, 69, 0.7);
+                }
+                &.red {
+                    background: rgba(255,41,50, 0.7);
+                }
+                &.gray {
+                    background: rgba(90,90,90, 0.7);
+                }
+                &:hover {
+                    opacity:0;
+                    & output {
+                        opacity:0;
+                        &:hover {
+                            cursor:pointer !important;
+                        }
+                    }
+                }
+
+                & output {
+                transition:0.5s opacity ease-in-out;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                margin-top: -36px;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                font-family: 'ddt';
+                font-weight:bold;
+                text-shadow:0px 2px 5px rgba(0,0,0,0.3);
+                    & sup {
+                        position:absolute;
+                        margin-top:-23px;
+                        font-size:50%;
+                        opacity:0.5;
+                        top:36%;
+                        font-weight:normal;
+                    }
+                }
+            }
+
+            
+
+        }
+        & .energyCharts {
+            font-family:'minion-pro';
+            text-transform:uppercase;
+            padding:4px;
+            font-size:12px;
+            letter-spacing:1px;
+            display:block;
+        }
+        & img {
+            border-radius:1000px;
+
+        }
+
+    }
+    
+}
+
+
+#map {
+    background:#323232;
+    margin-bottom:30px;
+
+    & legend {
+            background: white;
+            position: fixed;
+            bottom: 11%;
+            height: 157px;
+            width: 135px;
+            right: 20px;
+            border-radius: 10px;
+            padding: 5px 13px;
+            font-size: 12px;
+            font-family: 'minion-pro';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+        & h6 {
+            font-family:'minion-pro';
+            text-transform:uppercase;
+            letter-spacing:3px;
+            font-weight:bold;
+        }
+        & small {
+            text-transform:none;
+            line-height:100%;
+        }
+
+    }
+}
+
+
+
 .circle {
     border-radius:1000px;
     padding:0;
@@ -54,9 +370,6 @@ body {
     }
     span {
         font-size: 80px;
-        &.small {
-            font-size:50px;
-        }
         position: absolute;
         z-index: 1000;
         color: white;
@@ -68,6 +381,11 @@ body {
         top: 50%;
         line-height: 0;
         font-weight:bold;
+
+        &.small {
+            font-size:50px;
+        }
+
         &.doubleDigit {
             &:after {
                 content: '%';
@@ -94,21 +412,170 @@ body {
 
 }
 
-.glyphicon-map-marker {
-    color:$colorGreen;
-    font-size:20px
+.angular-google-map {
+    & img {
+    max-width: inherit;
+    }
+    & .glyphicon-map-marker {
+
+        &:before {
+        content: "\e062";
+        position: absolute;
+        bottom:0;
+        }
+
+        &.red {
+            color: $colorRed;
+        }
+        &.green {
+            color: $colorGreen;
+        }
+        &.gray {
+            color: $colorGray;
+        }
+        &.blue {
+            color: $colorBlue;
+        }
+    }
+
 }
+
+.glyphicon-map-marker {
+
+        &.red {
+            color: $colorRed;
+        }
+        &.green {
+            color: $colorGreen;
+        }
+        &.gray {
+            color: $colorGray;
+        }
+    }
+
+
+.mapMarker {
+    position:absolute !important;
+    width: 0;
+    height: 0;
+    overflow:visible;
+        &.red {
+            color: $colorRed;
+            & h6 {
+                border-color: $colorRedLighter;
+                background: $colorRedLighter;
+            }
+            & .markerCircle {
+                background: $colorRedLight;
+            }
+
+        }
+        &.green {
+            color: $colorGreen;
+            & h6 {
+                border-color: $colorGreenLighter;
+                background: $colorGreenLighter;
+            }
+            & .markerCircle {
+                background: $colorGreenLight;
+            }
+        }
+        &.gray {
+            color: $colorGray;
+            & h6 {
+                border-color: $colorGrayLighter;
+                background: $colorGrayLighter;
+            }
+            & .markerCircle {
+                background: $colorGrayLight;
+            }
+        }
+        &.blue {
+            transition:all 0.5s ease-in-out;
+            color: $colorBlue !important;
+            & h6 {
+                transition:all 0.5s ease-in-out;
+                border-color: $colorBlueLighter !important;
+                background: $colorBlueLighter !important;
+            }
+            & .markerCircle {
+                transition:all 0.5s ease-in-out;
+                background: $colorBlueLight !important;
+            }
+
+        }
+        & .markerCircle {
+            position:absolute;
+            z-index:1;
+            border-radius:100px;
+        }
+        & h6 {
+            font-size:inherit;
+            font-family: $fontSansSerif;
+            font-weight:bold;
+            letter-spacing:-0.5px;
+            position:absolute;
+            background:white;
+            border-radius:1000px;
+            margin:0 !important;
+            text-align:center;
+            box-shadow:0px 0px 5px rgba(255,255,255,0.4);
+            border-width:2px;
+            border-style: solid;
+            z-index:2;
+            text-shadow:0px 3px 3px rgba(0, 0, 0, 0.1)
+        }
+
+
+
+        & .glyphicon {
+            height:0;
+            position:absolute;
+        }
+
+    & a {
+            position:absolute;
+            top:0;
+            left:0;
+            text-align:center;
+            color:white;
+        }
+}
+
+
+
+
+    
 
 #map {
-    border-bottom:3px solid #ccc;
+    border-bottom: 3px solid #777;
+    overflow: hidden;
+    box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
 }
-.footer {
-
+#building {
+    position:fixed;
+}
+.callout {
+    text-align:center;
+    margin-bottom:30px;
+     & img {
+        max-width:60%;
+     }
+     & h6 {
+        text-transform:uppercase;
+        letter-spacing:3px;
+     }
+}
+footer {
+    min-height:80px;
     text-align:center;
     & img {
         max-width:100px;
         margin:0px 20px;
         max-height:40px;
+    }
+    & ul.nav {
+        padding:20px 0;
     }
 }
 
@@ -136,11 +603,6 @@ p {
     font-family: $fontSansSerif
 }
 
-#intro {
-    text-align: center;
-    margin-top:30px
-}
-
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -150,4 +612,229 @@ p {
     padding-bottom: 19px;
 }
 
+.angular-google-map-container { 
+    width: 66.6666666%;
+    height: 90%;
+    position:fixed !important;
+    top:40px;
+    left:33.333%;
+} 
+
+/* Animations */
+
+/* Have to set height explicity on ui-view 
+to prevent collapsing during animation*/
+#building [ui-view]{
+ height: 65px; 
+}
+section#about, section#whatIsCarbonSavings {
+    position: fixed;
+    z-index: 100000000000000;
+    left: 33.3333%;
+    top: 10%;
+    margin-left: 110px;
+    margin-right: 110px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.4);
+
+    & .modal-header .close {
+        float: right;
+        background: $colorGreen;
+        padding: 6px;
+        border-radius: 100px;
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+        text-align: center;
+        color: white !important;
+        font-weight: bold;
+    }
+}
+
+#building {
+        & .mapMarker {
+        position:static !important
+        }
+        & .glyphicon-map-marker:before {
+            content:'';
+        }
+}
+
+.ui-view-container {
+  position: relative;
+}
+
+#building [ui-view] section {
+     width: 220px;
+    height: 280px;
+    position: absolute;
+    left: -210px;
+    top: -160px;
+    border-radius: 9px;
+    padding: 0px 10px 10px 10px;
+
+
+    & h2 {
+        font-family: "ddt";
+    }
+    & p {
+        font-family:'minion-pro';
+        white-space: normal;
+        font-style: italic;
+        font-size: 13px;
+        line-height: 16px;
+        margin-top: -38px;
+        padding-top: 22px;
+        color: #3D3D3D;
+        border-top: 1px solid #ddd;
+        position: relative;
+        z-index: 0;
+    }
+    & a {
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+        margin-top: -7px;
+        font-style:italic;
+    }
+}
+
+#building [ui-view] {
+
+    &.ng-enter, &.ng-leave {
+      position: absolute;
+      transition:all .5s ease-in-out;
+    }
+
+    &.ng-enter {
+      opacity: 0;
+        transform:scale3d(0.5, 0.5, 0.5);
+    }
+
+    &.ng-enter-active {
+      opacity: 1;
+      transform:scale3d(1, 1, 1);
+    }
+
+    &.ng-leave {
+      opacity: 1;
+      transform:translate3d(0, 0, 0);
+    }
+    &.ng-leave-active {
+      opacity: 0;
+      transform:scale3d(0.5, 0.5, 0.5);
+    }
+
+}
+
+/* Map Marker Rotations  */
+
+[data-building-id="1"] {
+    transform:rotate(120deg);
+    & h6 {
+        transform:rotate(-120deg);
+    }
+}
+[data-building-id="2"] {
+    transform:rotate(45deg);
+    & h6 {
+        transform:rotate(-45deg);
+    }
+}
+[data-building-id="4"] {
+    transform:rotate(270deg);
+    & h6 {
+        transform:rotate(-270deg);
+    }
+}
+[data-building-id="7"] {
+    transform:rotate(45deg);
+    & h6 {
+        transform:rotate(-45deg);
+    }
+}
+
+[data-building-id="6"] {
+    transform:rotate(-90deg);
+    & h6 {
+        transform:rotate(90deg);
+    }
+}
+
+[data-building-id="7"] {
+    transform:rotate(90deg);
+    & h6 {
+        transform:rotate(-90deg);
+    }
+}
+
+[data-building-id="8"] {
+    transform:rotate(180deg);
+    & h6 {
+        transform:rotate(-180deg);
+    }
+}
+
+[data-building-id="9"] {
+    transform:rotate(235deg);
+    & h6 {
+        transform:rotate(-235deg);
+    }
+}
+
+[data-building-id="11"] {
+    transform:rotate(-45deg);
+    & h6 {
+        transform:rotate(45deg);
+    }
+}
+
+[data-building-id="12"] {
+    transform:rotate(45deg);
+    & h6 {
+        transform:rotate(-45deg);
+    }
+}
+
+[data-building-id="15"] {
+    transform:rotate(90deg);
+    & h6 {
+        transform:rotate(-90deg);
+    }
+}
+[data-building-id="16"] {
+    transform:rotate(-90deg);
+    & h6 {
+        transform:rotate(90deg);
+    }
+}
+
+[data-building-id="17"] {
+    transform:rotate(90deg);
+    & h6 {
+        transform:rotate(-90deg);
+    }
+}
+
+[data-building-id="18"] {
+    transform:rotate(215deg);
+    & h6 {
+        transform:rotate(-215deg);
+    }
+}
+[data-building-id="19"] {
+    transform:rotate(90deg);
+    & h6 {
+        transform:rotate(-90deg);
+    }
+}
+
+[data-building-id="20"] {
+    transform:rotate(-90deg);
+    & h6 {
+        transform:rotate(90deg);
+    }
+}
 

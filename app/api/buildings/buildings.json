@@ -1,65 +1,443 @@
 {
-	"1" : {
-		"id":1, 
-		"name":"The Commoner",
-		"imageThumbnail": "the-commoner.jpg",
-		"address": {
-			"streetName": "Pleasant Ave.",
-			"streetNumber": "85",
-			"postalCode": "K2R3R4",
-			"city": "Kingston",
-			"province": "Ontario",
-			"country": "Canada"
-		},
-		"coordinates": {
-			"latitude": "44.263565",
-			"longitude": "-76.50336"
-		},
-		"savings": {
-			"fiveYear": "200000" ,
-			"lastMonth": "0.4"
-		}
-	},
-	"2": {
-		"id":2,
-		"name":"The Claremount", 
-		"imageThumbnail": "the-claremount.jpg",
-		"address": {
-			"streetName": "Claremount Street",
-			"streetNumber": "1455",
-			"postalCode": "K2R3R4",
-			"city": "Kingston",
-			"province": "Ontario",
-			"country": "Canada" 
-		},
-		"coordinates": {
-			"latitude": "44.263560",
-			"longitude": "-76.50337"	
-		},
-		"savings": {
-			"fiveYear": "2223290" ,
-			"lastMonth": "3.1"
-		}
-	},
-	"3": {
-		"id":3, 							
-		"name":"Wuthering Heights", 			
-		"imageThumbnail": "wuthering-heights.jpg",
-		"address": {
-			"streetName": "Heathcliff Road",	
-			"streetNumber": "369", 			
-			"postalCode": "K2R3R4",
-			"city": "Kingston",
-			"province": "Ontario",
-			"country": "Canada"
-		},
-		"coordinates": {
-			"latitude": "44.263561",
-			"longitude": "-76.50336"
-		},
-		"savings": {
-			"fiveYear": "730249" ,
-			"lastMonth": "-1.9"
-		}
-	}
+   "1":{
+      "id":1,
+      "name":"10 Aberdeen Street",
+      "imageThumbnail":"10_Aberdeen.jpg",
+      "address":{
+         "streetName":"Aberdeen Street",
+         "streetNumber":"10",
+         "postalCode":"K7L3N2",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2301",
+         "longitude":"-76.4945"
+      },
+      "savings":{
+         "fiveYear":"200000",
+         "lastMonth":"0.2"
+      }
+   },
+   "2":{
+      "id":2,
+      "name":"32 Aberdeen Street",
+      "imageThumbnail":"32_Aberdeen.jpg",
+      "address":{
+         "streetName":"Aberdeen Street",
+         "streetNumber":"32",
+         "postalCode":"K7L3N2",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.230820",
+         "longitude":"-76.494397 "
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"2.2"
+      }
+   },
+   "3":{
+      "id":3,
+      "name":"366 Albert Street",
+      "imageThumbnail":"366_Albert.jpg",
+      "address":{
+         "streetName":"Albert Street",
+         "streetNumber":"366",
+         "postalCode":"K7L3V9",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.230981",
+         "longitude":"-76.500161"
+      },
+      "savings":{
+         "fiveYear":"730249",
+         "lastMonth":"-1.9"
+      }
+   },
+   "4":{
+      "id":4,
+      "name":"241 Alfred Street",
+      "imageThumbnail":"241_Alfred.jpg",
+      "address":{
+         "streetName":"Alfred Street",
+         "streetNumber":"241",
+         "postalCode":"K7L3S1",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.232297",
+         "longitude":"-76.497032"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"12.2"
+      }
+   },
+   "5":{
+      "id":5,
+      "name":"285 Alfred Street",
+      "imageThumbnail":"285_Alfred.jpg",
+      "address":{
+         "streetName":"Alfred Street",
+         "streetNumber":"285",
+         "postalCode":"K7L3S3",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2337",
+         "longitude":"-76.497159"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"3.2"
+      }
+   },
+   "6":{
+      "id":6,
+      "name":"287 Alfred Street",
+      "imageThumbnail":"287_Alfred.jpg",
+      "address":{
+         "streetName":"Alfred Street",
+         "streetNumber":"287",
+         "postalCode":"K7L3S3",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2335",
+         "longitude":"-76.4972"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"10.2"
+      }
+   },
+   "7":{
+      "id":7,
+      "name":"397 Brock Street",
+      "imageThumbnail":"397_Brock.jpg",
+      "address":{
+         "streetName":"Brock Street",
+         "streetNumber":"397",
+         "postalCode":"K7L1T3",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.232576",
+         "longitude":"-76.495305"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"-3.2"
+      }
+   },
+   "8":{
+      "id":8,
+      "name":"404 Brock Street",
+      "imageThumbnail":"404_Brock.jpg",
+      "address":{
+         "streetName":"Brock Street",
+         "streetNumber":"404",
+         "postalCode":"K7L1T1",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.232571",
+         "longitude":"-76.495454"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"10.2"
+      }
+   },
+   "9":{
+      "id":9,
+      "name":"406 Brock Street",
+      "imageThumbnail":"406_Brock.jpg",
+      "address":{
+         "streetName":"Brock Street",
+         "streetNumber":"406",
+         "postalCode":"K7L1T1",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.232589",
+         "longitude":"-76.4959"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"3.2"
+      }
+   },
+   "10":{
+      "id":10,
+      "name":"374/376 Earl Street",
+      "imageThumbnail":"374_376_Earl.jpg",
+      "address":{
+         "streetName":"Earl Street",
+         "streetNumber":"374/376",
+         "postalCode":"K7L2J5",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.229681",
+         "longitude":"-76.498906"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"15.2"
+      }
+   },
+   "11":{
+      "id":11,
+      "name":"30 Garrett Street",
+      "imageThumbnail":"30_Garrett.jpg",
+      "address":{
+         "streetName":"Garrett Street",
+         "streetNumber":"30",
+         "postalCode":"K7L1H6",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2334",
+         "longitude":"-76.495603"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "12":{
+      "id":12,
+      "name":"31 Garrett Street",
+      "imageThumbnail":"31_Garrett.jpg",
+      "address":{
+         "streetName":"Garrett Street",
+         "streetNumber":"31",
+         "postalCode":"K7L1H7",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2335",
+         "longitude":"-76.495440"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"42.2"
+      }
+   },
+   "13":{
+      "id":13,
+      "name":"373 Johnson Street",
+      "imageThumbnail":"373_Johnson.jpg",
+      "address":{
+         "streetName":"Garrett Street",
+         "streetNumber":"373",
+         "postalCode":"K7L1Y9",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.231593",
+         "longitude":"-76.494008"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "14":{
+      "id":14,
+      "name":"29 Nelson Street",
+      "imageThumbnail":"29_Nelson.jpg",
+      "address":{
+         "streetName":"Nelson Street",
+         "streetNumber":"29",
+         "postalCode":"K7L2W6",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2325",
+         "longitude":"-76.5014"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "15":{
+      "id":15,
+      "name":"31 Nelson Street",
+      "imageThumbnail":"31_Nelson.jpg",
+      "address":{
+         "streetName":"Nelson Street",
+         "streetNumber":"31",
+         "postalCode":"K7L3W6",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.232475",
+         "longitude":"-76.5012"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "16":{
+      "id":16,
+      "name":"307 University Avenue",
+      "imageThumbnail":"307_University.jpg",
+      "address":{
+         "streetName":"University Avenue",
+         "streetNumber":"307",
+         "postalCode":"K7L3R3",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.233040",
+         "longitude":"-76.495496"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "17":{
+      "id":17,
+      "name":"309 University Avenue",
+      "imageThumbnail":"309_University.jpg",
+      "address":{
+         "streetName":"University Avenue",
+         "streetNumber":"309",
+         "postalCode":"K7L3R3",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2332",
+         "longitude":"-76.49535"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "18":{
+      "id":18,
+      "name":"314 William Street",
+      "imageThumbnail":"314_William.jpg",
+      "address":{
+         "streetName":"William Street",
+         "streetNumber":"314",
+         "postalCode":"K7L2E9",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.2302",
+         "longitude":"-76.4946"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "19":{
+      "id":19,
+      "name":"318 William Street",
+      "imageThumbnail":"318_William.jpg",
+      "address":{
+         "streetName":"William Street",
+         "streetNumber":"318",
+         "postalCode":"K7L2E9",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.23049",
+         "longitude":"-76.4945"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "20":{
+      "id":20,
+      "name":"320 William Street",
+      "imageThumbnail":"320_William.jpg",
+      "address":{
+         "streetName":"William Street",
+         "streetNumber":"320",
+         "postalCode":"K7L2E9",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.230472",
+         "longitude":"-76.494813"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   },
+   "21":{
+      "id":21,
+      "name":"323 William Street",
+      "imageThumbnail":"323_William.jpg",
+      "address":{
+         "streetName":"William Street",
+         "streetNumber":"323",
+         "postalCode":"K7L2E8",
+         "city":"Kingston",
+         "province":"Ontario",
+         "country":"Canada"
+      },
+      "coordinates":{
+         "latitude":"44.230761",
+         "longitude":"-76.494976"
+      },
+      "savings":{
+         "fiveYear":"2223290",
+         "lastMonth":"5.2"
+      }
+   }
 }

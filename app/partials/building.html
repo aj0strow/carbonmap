@@ -1,0 +1,39 @@
+
+   <section ng-id="{{ building.id }}" class="{{ building.colour }} buildingFeature">
+
+          <div class="building">
+          <h6>
+            <span class="glyphicon glyphicon-map-marker">	
+            </span>{{ building.address.streetNumber }} {{ building.address.streetName}}<br />
+            "{{ building.name }}" 
+            
+          </h6>
+
+          <div class="buildingBackground" style="background:url(images/buildings/{{ building.imageThumbnail }}); background-size:cover">
+            <div class="buildingOverlay">
+
+              <output>{{ building.savings.lastMonth }}<sup>%</sup></output>
+
+
+
+              <img width="100%" height="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" />
+            </div>
+          </div>
+          
+          <br />
+          
+          <p>{{ building.description }}</p>
+          
+          
+
+          
+          <a ng-href="/building/{{ building.id }}">Via StudentHousingKingston.ca &raquo;</a>
+         
+          
+        </section>
+
+	
+	
+
+	
+
