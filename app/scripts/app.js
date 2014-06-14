@@ -1,7 +1,7 @@
 'use strict';
 
-window.typekitLoad( 'gci4xol' );
-var energyMap = angular.module('energyMap',[
+window.typekitLoad('gci4xol');
+var energyMap = angular.module('energyMap', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -12,54 +12,44 @@ var energyMap = angular.module('energyMap',[
     'ui.router',
     'slugifier',
     'google-maps'
-  ]);
+  ]).config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
 
-energyMap.config(function ($stateProvider, $urlRouterProvider) {
-     $urlRouterProvider.otherwise("/")
-
-    $stateProvider
-    .state('map', {
-      url: "/",
+    $stateProvider.state('map', {
+      url: '/',
       views: {
-        "map": { templateUrl: "partials/map.html",
-                  controller:"MainCtrl"
-              }
-      }
-    })
-
-    $stateProvider
-    .state('map.building', {
-      views: {
-        "building": 
-          {
-            templateUrl: "partials/building.html",
-            controller: "BuildingCtrl"
+        'map': {
+            templateUrl: 'partials/map.html',
+            controller: 'MainCtrl'
           }
-      },
-      url: "building/:id"
-    })
+        }
+      });
 
-    $stateProvider
-    .state('map.whatIsCarbonSavings', {
-      views: {
-        "whatIsCarbonSavings": 
-          {
-            templateUrl: "partials/whatIsCarbonSavings.html"
-          }
-      },
-      url: "what-is-carbon-savings"
-    })
+    $stateProvider.state('map.building', {
+        views: {
+          'building': {
+              templateUrl: 'partials/building.html',
+              controller: 'BuildingCtrl'
+            }
+          },
+          url: 'building/:id'
+        });
 
-    $stateProvider
-    .state('map.about', {
-      views: {
-        "about": 
-          {
-            templateUrl: "partials/about.html",
-          }
-      },
-      url: "about"
-    })
+    $stateProvider.state('map.whatIsCarbonSavings', {
+        views: {
+          'whatIsCarbonSavings': {
+              templateUrl: 'partials/whatIsCarbonSavings.html'
+            }
+          },
+          url: 'what-is-carbon-savings'
+        });
 
+    $stateProvider.state('map.about', {
+        views: {
+          'about': {
+              templateUrl: 'partials/about.html',
+            }
+          },
+          url: 'about'
+        });
   });
-

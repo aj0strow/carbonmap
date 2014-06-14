@@ -1,49 +1,50 @@
 'use strict';
 
-angular.module('energyMap')
-  .controller('BuildingCtrl', [
-  '$scope',
-  'buildingFactory',
-  'buildingColourFactory',
-  '_',
-  '$stateParams',
-  '$http',
-  '$timeout',
-  function ($scope, buildingFactory, buildingColourFactory, _, $stateParams, $http, $timeout) {
+angular.module('energyMap').directive('embuilding', ['$stateParams',
+    function($stateParams) {
 
-    $scope.abs = Math.abs;
+        function link() {
 
-    $scope.building = {};
-    $scope.hello = 'hello';
+            var jQuery = jQuery || [];
 
-    buildingFactory.getBuilding($stateParams.id, function(results) {
-      
-	      $scope.building = results;
-	      $scope.building.colour = buildingColourFactory.getBuildingColour(results.savings.lastMonth);
+            jQuery(document).ready(function($) {
 
-	  });
+                $('#building .mapMarker').remove();
 
-  }]).directive('embuilding', ['$stateParams', function($stateParams) {
+                $('*[data-building-id="' + $stateParams.id + '"]').clone().css({
+                    'top': 0,
+                    'left': 0
+                  }).css('z-index', '2').appendTo('#building');
 
-    function link(scope, element, attrs) {
-      
-    	jQuery(document).ready(function($){
+              });
 
-    		$('#building .mapMarker').remove();
+          }
 
-       
-    		$("*[data-building-id='"+$stateParams.id+"']").clone().css({
-                              'top':0,
-                              'left':0
-            }).css('z-index','2').appendTo('#building');
+        return {
+            priority: 500,
+            link: link,
+            restrict: 'E'
+          };
+      }
+]).controller('BuildingCtrl', [
+    '$scope',
+    'buildingFactory',
+    'buildingColourFactory',
+    '_',
+    '$stateParams',
+    function($scope, buildingFactory, buildingColourFactory, _, $stateParams) {
 
-    	});
+        $scope.abs = Math.abs;
 
-    }
+        $scope.building = {};
+        $scope.hello = 'hello';
 
-    return {
-   		priority:500,
-      link: link,
-      restrict: 'E'
-    };
-  }]);
+        buildingFactory.getBuilding($stateParams.id, function(results) {
+
+            $scope.building = results;
+            $scope.building.colour = buildingColourFactory.getBuildingColour(results.savings.lastMonth);
+
+          });
+
+      }
+  ]);

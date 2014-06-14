@@ -6124,56 +6124,56 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
   transform: rotate(-45deg);
 }
 
-/* line 802, main.scss */
+/* line 801, main.scss */
 [data-building-id="15"] {
   transform: rotate(90deg);
 }
-/* line 804, main.scss */
+/* line 803, main.scss */
 [data-building-id="15"] h6 {
   transform: rotate(-90deg);
 }
 
-/* line 808, main.scss */
+/* line 807, main.scss */
 [data-building-id="16"] {
   transform: rotate(-90deg);
 }
-/* line 810, main.scss */
+/* line 809, main.scss */
 [data-building-id="16"] h6 {
   transform: rotate(90deg);
 }
 
-/* line 816, main.scss */
+/* line 814, main.scss */
 [data-building-id="17"] {
   transform: rotate(90deg);
 }
-/* line 818, main.scss */
+/* line 816, main.scss */
 [data-building-id="17"] h6 {
   transform: rotate(-90deg);
 }
 
-/* line 823, main.scss */
+/* line 821, main.scss */
 [data-building-id="18"] {
   transform: rotate(215deg);
 }
-/* line 825, main.scss */
+/* line 823, main.scss */
 [data-building-id="18"] h6 {
   transform: rotate(-215deg);
 }
 
-/* line 829, main.scss */
+/* line 827, main.scss */
 [data-building-id="19"] {
   transform: rotate(90deg);
 }
-/* line 831, main.scss */
+/* line 829, main.scss */
 [data-building-id="19"] h6 {
   transform: rotate(-90deg);
 }
 
-/* line 836, main.scss */
+/* line 834, main.scss */
 [data-building-id="20"] {
   transform: rotate(-90deg);
 }
-/* line 838, main.scss */
+/* line 836, main.scss */
 [data-building-id="20"] h6 {
   transform: rotate(90deg);
 }
