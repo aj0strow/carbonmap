@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('energyMap').directive('embuilding', ['$stateParams',
+angular.module('energyMap').directive('horizontal', ['$stateParams',
     function($stateParams) {
 
         function link() {
@@ -26,6 +26,36 @@ angular.module('energyMap').directive('embuilding', ['$stateParams',
             restrict: 'E'
           };
       }
+])
+
+angular.module('energyMap').directive('embuilding', ['$stateParams',
+    function($stateParams) {
+
+        function link() {
+
+            var jQuery = jQuery || [];
+
+            jQuery(document).ready(function($) {
+
+                $('#building .mapMarker').remove();
+
+                $('*[data-building-id="' + $stateParams.id + '"]').clone().css({
+                    'top': 0,
+                    'left': 0
+                  }).css('z-index', '2').appendTo('#building');
+
+                   $('*[data-building-id="' + $stateParams.id + '"]').closest('.building').addClass('blue');
+
+              });
+
+          }
+
+        return {
+            priority: 500,
+            link: link,
+            restrict: 'E'
+          };
+      }
 ]).controller('BuildingCtrl', [
     '$scope',
     'buildingFactory',
@@ -37,7 +67,6 @@ angular.module('energyMap').directive('embuilding', ['$stateParams',
         $scope.abs = Math.abs;
 
         $scope.building = {};
-        $scope.hello = 'hello';
 
         buildingFactory.getBuilding($stateParams.id, function(results) {
 

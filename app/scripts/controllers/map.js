@@ -61,7 +61,9 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
     '$http',
     '$timeout',
     '$location',
-    function ($scope, buildingsFactory, _, $http, $timeout, $location) {
+    'matchmedia',
+    function ($scope, buildingsFactory, _, $http, $timeout, $location, matchmedia) {
+
 
         $scope.abs = Math.abs;
 
@@ -75,6 +77,7 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
                 return result.savings.lastMonth;
             });
             $scope.buildings = results;
+            window.buildings = $scope.buildings;
 
             angular.forEach(results, function (value) {
                 $scope.savingsOverview.fiveYear = 0;
@@ -164,151 +167,198 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
                 'color': '#F2F7E9'
             }]
         }];
-        // GOOGLE MAP //
-        $scope.map = {
-            center: {
-                latitude: 44.231,
-                longitude: -76.495
-            },
-            zoom: 16,
-            options: {
-                overviewMapControl: false,
-                scaleControl: true,
-                scrollwheel: false,
-                styles: mapStyles,
-                zoomControl: true,
-            },
-            draggable: true,
-            events: {
-                tilesloaded: function (map) {
-                    $scope.$apply(function () {
 
-                        window.map = map;
-                        $scope.mapInstance = map;
+        matchmedia.onLandscape(function(){
 
-                        function CustomMarker(latlng, themap, className, buildingId, percent, content) {
-                            this.latlng_ = latlng;
-                            this.classAttr = className;
-                            this.percent = percent;
-                            this.content = content;
-                            this.id = buildingId;
-                            this.setMap(themap);
-                        }
 
-                        CustomMarker.prototype = new google.maps.OverlayView();
 
-                        CustomMarker.prototype.draw = function () {
-                            var div = this.div_;
-                            if (!div) {
-                                div = this.div_ = document.createElement('DIV');
+            // GOOGLE MAP //
+            $scope.map = {
+                center: {
+                    latitude: 44.231,
+                    longitude: -76.495
+                },
+                zoom: 16,
+                options: {
+                    overviewMapControl: false,
+                    scaleControl: true,
+                    scrollwheel: false,
+                    styles: mapStyles,
+                    zoomControl: true,
+                },
+                draggable: true,
+                events: {
+                    tilesloaded: function (map) {
+                        $scope.$apply(function () {
 
-                                var createColor = function (num) {
-                                    if (num < 0) {
-                                      return 'red';
-                                    }
-                                    if (num === 0) {
-                                      return 'gray';
-                                    }
-                                    if (num > 0) {
-                                      return 'green';
-                                    }
-                                };
+                            window.map = map;
+                            $scope.mapInstance = map;
 
-                                div.className = this.classAttr + ' ' + createColor(this.percent);
-                                div.content = this.content;
-                                var fontSizeBound = Math.abs(this.percent) * 4 + 28 > 50 ? 50 : Math.abs(this.percent) * 4 + 28;
-                                fontSizeBound = fontSizeBound < 10 ? 10 : fontSizeBound;
-                                div.style.fontSize = fontSizeBound + 'px';
-                                div.setAttribute('data-percent', this.percent);
-                                div.setAttribute('data-building-id', this.id);
-                                var panes = this.getPanes();
-                                panes.overlayMouseTarget.appendChild(div);
-                                var that = this;
-                                google.maps.event.addDomListener(div, 'click', function () {
-                                    google.maps.event.trigger(that, 'click'); // from [http://stackoverflow.com/questions/3361823/make-custom-overlay-clickable-google-maps-api-v3]
+                            function CustomMarker(latlng, themap, className, buildingId, percent, content) {
+                                this.latlng_ = latlng;
+                                this.classAttr = className;
+                                this.percent = percent;
+                                this.content = content;
+                                this.id = buildingId;
+                                this.setMap(themap);
+                            }
 
-                                });
+                            CustomMarker.prototype = new google.maps.OverlayView();
 
-                                $('.mapMarker').each(function (i, el) {
+                            CustomMarker.prototype.draw = function () {
+                                var div = this.div_;
+                                if (!div) {
+                                    div = this.div_ = document.createElement('DIV');
 
-                                    $(el).empty();
-
-                                    var spanLeftPos = -($(this).css('font-size').slice(0, -2) / 1.3) / 2;
-                                    var buildingID = $(this).data('building-id');
-
-                                    // create glyph span
-
-                                    $('<span />', {
-                                        'class': 'glyphicon glyphicon-map-marker',
-                                        'css': {
-                                            'left': spanLeftPos
+                                    var createColor = function (num) {
+                                        if (num < 0) {
+                                          return 'red';
                                         }
-                                    }).appendTo(el);
+                                        if (num === 0) {
+                                          return 'gray';
+                                        }
+                                        if (num > 0) {
+                                          return 'green';
+                                        }
+                                    };
 
-                                    //create a link element
+                                    div.className = this.classAttr + ' ' + createColor(this.percent);
+                                    div.content = this.content;
+                                    var fontSizeBound = Math.abs(this.percent) * 4 + 28 > 50 ? 50 : Math.abs(this.percent) * 4 + 28;
+                                    fontSizeBound = fontSizeBound < 10 ? 10 : fontSizeBound;
+                                    div.style.fontSize = fontSizeBound + 'px';
+                                    div.setAttribute('data-percent', this.percent);
+                                    div.setAttribute('data-building-id', this.id);
+                                    var panes = this.getPanes();
+                                    panes.overlayMouseTarget.appendChild(div);
+                                    var that = this;
+                                    google.maps.event.addDomListener(div, 'mousedown', function () {
+                                        google.maps.event.trigger(that, 'mousedown'); // from [http://stackoverflow.com/questions/3361823/make-custom-overlay-clickable-google-maps-api-v3]
 
-                                    $('<a />', {
-                                        'ui-sref': '/building/' + buildingID,
-                                    }).appendTo($(el).find('span'));
+                                    });
 
-                                    // create heading
+                                    $('.mapMarker').each(function (i, el) {
 
-                                    var h6LeftPos = ($(this).css('font-size').slice(0, -2) / 1.63) * 0.29;
-                                    var h6FontSize = $(this).css('font-size').slice(0, -2) / 3.2;
-                                    var h6LineHeight = $(this).css('font-size').slice(0, -2) / 1.7 - 2;
-                                    var h6Width = $(this).css('font-size').slice(0, -2) / 1.6;
-                                    var h6Height = $(this).css('font-size').slice(0, -2) / 1.6;
-                                    var h6Bottom = $(this).css('font-size').slice(0, -2) / 2.8;
-                                    var percent = Math.abs($(this).data('percent'));
-                                    var letterSpacing = h6FontSize > 10 ? '-0.5px' : '0px';
+                                        $(el).empty();
 
-                                    $('<h6 />', {
-                                        'css': {
-                                            'line-height': h6LineHeight + 'px',
-                                            'left': h6LeftPos,
-                                            'font-size': h6FontSize,
-                                            'width': h6Width,
-                                            'height': h6Height,
-                                            'bottom': h6Bottom,
-                                            'letter-spacing': letterSpacing
+                                        var spanLeftPos = -($(this).css('font-size').slice(0, -2) / 1.3) / 2;
+                                        var buildingID = $(this).data('building-id');
+
+                                        // create glyph span
+
+                                        $('<span />', {
+                                            'class': 'glyphicon glyphicon-map-marker',
+                                            'css': {
+                                                'left': spanLeftPos
+                                            }
+                                        }).appendTo(el);
+
+                                        //create a link element
+
+                                        $('<a />', {
+                                            'ui-sref': '/building/' + buildingID,
+                                        }).appendTo($(el).find('span'));
+
+                                        // create heading
+
+                                        var h6LeftPos = ($(this).css('font-size').slice(0, -2) / 1.63) * 0.29;
+                                        var h6FontSize = $(this).css('font-size').slice(0, -2) / 3.2;
+                                        var h6LineHeight = $(this).css('font-size').slice(0, -2) / 1.7 - 2;
+                                        var h6Width = $(this).css('font-size').slice(0, -2) / 1.6;
+                                        var h6Height = $(this).css('font-size').slice(0, -2) / 1.6;
+                                        var h6Bottom = $(this).css('font-size').slice(0, -2) / 2.8;
+                                        var percent = Math.abs($(this).data('percent'));
+                                        var letterSpacing = h6FontSize > 10 ? '-0.5px' : '0px';
+
+                                        $('<h6 />', {
+                                            'css': {
+                                                'line-height': h6LineHeight + 'px',
+                                                'left': h6LeftPos,
+                                                'font-size': h6FontSize,
+                                                'width': h6Width,
+                                                'height': h6Height,
+                                                'bottom': h6Bottom,
+                                                'letter-spacing': letterSpacing
+                                            },
+                                            'html': percent
+                                        }).appendTo($(el).find('a'));
+
+                                        $('<div />', {
+                                            'css': {
+                                                'line-height': h6LineHeight + 'px',
+                                                'left': h6LeftPos * 0.48,
+                                                'font-size': h6FontSize,
+                                                'width': h6Width * 1.3,
+                                                'height': h6Height * 1.3,
+                                                'bottom': h6Bottom * 0.75,
+                                            },
+                                            'class': 'markerCircle'
+                                        }).appendTo($(el).find('a'));
+
+                                    }).hoverIntent({
+                                        over: function (e) {
+
+                                            $('.blue').removeClass('blue');
+
+                                            if ($location.path() === $(this).find('a').attr('href')) {
+                                                return;
+                                            }
+                                            console.log(e);
+
+                                            var showOnTop;
+
+                                            if($(this).offset().top + 300 > window.innerHeight) {
+                                              showOnTop = true;
+                                            } else {
+                                              showOnTop = false;
+                                            }
+
+                                            if (showOnTop) {
+                                                $('#building').css('top', $(this).offset().top - 50 + 'px');
+                                            } else {
+                                                $('#building').css('top', $(this).offset().top + 100 + 'px');
+                                            }
+
+                                            $('#building').css('left', $(this).offset().left + 'px');
+
+                                            $(this).toggleClass('blue');
+                                            //$(this).clone().appendTo('#building');
+
+                                            $location.path($(this).find('a').attr('ui-sref'));
+                                            $scope.$apply();
+                                            $scope.overTarget = true;
+
                                         },
-                                        'html': percent
-                                    }).appendTo($(el).find('a'));
+                                        out: function () {
+                                            $scope.overTarget = false;
 
-                                    $('<div />', {
-                                        'css': {
-                                            'line-height': h6LineHeight + 'px',
-                                            'left': h6LeftPos * 0.48,
-                                            'font-size': h6FontSize,
-                                            'width': h6Width * 1.3,
-                                            'height': h6Height * 1.3,
-                                            'bottom': h6Bottom * 0.75,
                                         },
-                                        'class': 'markerCircle'
-                                    }).appendTo($(el).find('a'));
+                                        timeout: 40,
+                                        sensitivity: 5,
+                                        interval: 200,
+                                    }).on('mousedown', function (e) {
 
-                                }).hoverIntent({
-                                    over: function () {
+                                        $('.blue').removeClass('blue');
 
-                                        if ($location.path() === $(this).find('a').attr('href')) {
+                                        if ($location.path() === $(this).find('a').attr('ui-sref')) {
                                             return;
                                         }
 
                                         var showOnTop;
 
-                                        if(window.mouseY + 300 > window.innerHeight) {
+                                        if($(this).offset().top + 300 > window.innerHeight) {
                                           showOnTop = true;
                                         } else {
                                           showOnTop = false;
                                         }
 
                                         if (showOnTop) {
-                                            $('#building').css('top', window.mouseY - 50 + 'px');
+                                            $('#building').css('top', $(this).offset().top - 50 + 'px');
                                         } else {
-                                            $('#building').css('top', window.mouseY + 100 + 'px');
+                                            $('#building').css('top', $(this).offset().top + 100 + 'px');
                                         }
 
-                                        $('#building').css('left', window.mouseX + 'px');
+                                        $('#building').css('left', $(this).offset().left + 'px');
 
                                         $(this).toggleClass('blue');
                                         //$(this).clone().appendTo('#building');
@@ -317,98 +367,77 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
                                         $scope.$apply();
                                         $scope.overTarget = true;
 
-                                    },
-                                    out: function () {
-                                        $scope.overTarget = false;
-
-                                    },
-                                    timeout: 40,
-                                    sensitivity: 5,
-                                    interval: 200,
-                                }).on('click', function () {
-
-                                    if ($location.path() === $(this).find('a').attr('ui-sref')) {
-                                        return;
-                                    }
-
-                                    var showOnTop;
-
-                                    if (window.mouseY + 300 > window.innerHeight) {
-                                      showOnTop = true;
-                                    } else {
-                                      showOnTop = false;
-                                    }
-
-                                    if (showOnTop) {
-                                        $('#building').css('top', window.mouseY - 50 + 'px');
-                                    } else {
-                                        $('#building').css('top', window.mouseY + 100 + 'px');
-                                    }
-
-                                    $('#building').css('left', window.mouseX + 'px');
-
-                                    $(this).toggleClass('blue');
-                                    //$(this).clone().appendTo('#building');
-
-                                    $location.path($(this).find('a').attr('ui-sref'));
-                                    $scope.$apply();
-                                    $scope.overTarget = true;
-
-                                });
-
-                                $('google-map').on('click', function () {
-
-                                    $location.path('/');
-
-                                });
-
-                                $('google-map').on('mousemove', function (e) {
-
-                                    window.mouseX = e.pageX;
-                                    window.mouseY = e.pageY;
-                                    $('.mapMarker').removeClass('blue');
-
-                                    jQuery(document).ready(function ($) {
-
-                                        if ($location.path().indexOf('/building') === 0) {
-
-                                            $('#building .mapMarker').remove();
-                                            $location.path('/').replace();
-                                            $scope.$apply();
-                                        }
                                     });
 
+                                    
+
+                                    $('google-map').on('mousemove', function (e) {
+
+                                        //window.mouseX = e.pageX;
+                                        //window.mouseY = e.pageY;
+                                        $('.mapMarker').removeClass('blue');
+
+                                        jQuery(document).ready(function ($) {
+
+                                            if ($location.path().indexOf('/building') === 0) {
+
+                                                $('#building .mapMarker').remove();
+                                                $location.path('/').replace();
+                                                $scope.$apply();
+                                            }
+                                        });
+
+                                    });
+                                }
+                                var point = this.getProjection().fromLatLngToDivPixel(this.latlng_);
+                                if (point) {
+                                    div.style.left = point.x + 'px';
+                                    div.style.top = point.y + 'px';
+                                }
+                            };
+
+                            if ($scope.buildings && !$scope.mapped) {
+
+                                var bounds = new google.maps.LatLngBounds();
+
+                                $scope.mapped = true;
+                                angular.forEach($scope.buildings, function (v) {
+
+                                    var latlng = new google.maps.LatLng(v.coordinates.latitude, v.coordinates.longitude);
+                                    bounds.extend(latlng);
+                                    window.bounds = bounds;
+                                    var overlay = new CustomMarker(latlng, window.map, 'mapMarker', v.id, v.savings.lastMonth);
+                                    google.maps.event.addListener(overlay, 'mousedown', function () {
+
+                                    });
+
+                                    map.fitBounds(bounds);
+
                                 });
-                            }
-                            var point = this.getProjection().fromLatLngToDivPixel(this.latlng_);
-                            if (point) {
-                                div.style.left = point.x + 'px';
-                                div.style.top = point.y + 'px';
-                            }
-                        };
 
-                        if ($scope.buildings && !$scope.mapped) {
 
-                            var bounds = new google.maps.LatLngBounds();
+                                jQuery(window).on('resize', function(){
 
-                            $scope.mapped = true;
-                            angular.forEach($scope.buildings, function (v) {
+                                    angular.forEach($scope.buildings, function (v) {
 
-                                var latlng = new google.maps.LatLng(v.coordinates.latitude, v.coordinates.longitude);
-                                bounds.extend(latlng);
-                                window.bounds = bounds;
-                                var overlay = new CustomMarker(latlng, window.map, 'mapMarker', v.id, v.savings.lastMonth);
-                                google.maps.event.addListener(overlay, 'click', function () {
+                                    var latlng = new google.maps.LatLng(v.coordinates.latitude, v.coordinates.longitude);
+                                    bounds.extend(latlng);
+                                    window.bounds = bounds;
+
+                                    map.fitBounds(bounds);
 
                                 });
 
-                            });
 
-                        }
-                    });
-                },
-                click: function () {}
-            }
-        };
+                                })
+
+                            }
+                        });
+                    },
+                    click: function () {}
+                }
+            };
+        // end onlandscape
+        });
     }
 ]);

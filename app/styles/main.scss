@@ -26,6 +26,26 @@ $fontSerif: "minion-pro";
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+
+
+@media only screen and (max-width:1024px) and (orientation:portrait) {
+    body > * {
+        display:none;
+    }
+    html body {
+        background-image:url(../images/rotate.jpg);
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+    html, body {
+        width:100%;
+        height:100%;
+        overflow:hidden;
+    }
+}
+
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -82,7 +102,10 @@ body {
 }
 
 body #mainPanel {
-    transition:1s opacity linear
+    transition:1s opacity linear;
+    height:100%;
+    z-index:10000;
+    position:relative;
 }
 body#state-mapbuilding #mainPanel {
 }
@@ -92,6 +115,7 @@ body#state-map #mainPanel {
 #mainPanel {
     background:rgb(151,197,69);
     text-shadow:0px 1px 0px rgba(255,255,255,0.3);
+
     & hr {
         margin:0;
     }
@@ -196,7 +220,6 @@ body#state-map #mainPanel {
 .buildingFeature {
     padding-bottom:30px;
     text-align:center;
-    white-space:nowrap;
     border-radius:10px;
 
     & .building {
@@ -310,6 +333,7 @@ body#state-map #mainPanel {
         }
         & img {
             border-radius:1000px;
+            opacity:0;
 
         }
 
@@ -321,7 +345,7 @@ body#state-map #mainPanel {
 #map {
     background:#323232;
     margin-bottom:30px;
-
+    height:0;
     & legend {
             background: white;
             position: fixed;
@@ -345,6 +369,7 @@ body#state-map #mainPanel {
         & small {
             text-transform:none;
             line-height:100%;
+            font-size:7px;
         }
 
     }
@@ -554,6 +579,7 @@ body#state-map #mainPanel {
 }
 #building {
     position:fixed;
+    z-index:9999999999;
 }
 .callout {
     text-align:center;
@@ -765,6 +791,7 @@ section#about, section#whatIsCarbonSavings {
 
 [data-building-id="7"] {
     transform:rotate(90deg);
+
     & h6 {
         transform:rotate(-90deg);
     }

@@ -11,8 +11,11 @@ var energyMap = angular.module('energyMap', [
     'ngFitText',
     'ui.router',
     'slugifier',
-    'google-maps'
-  ]).config(function($stateProvider, $urlRouterProvider) {
+    'google-maps',
+    'matchmedia-ng'
+  ]).config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+
+    
     $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('map', {

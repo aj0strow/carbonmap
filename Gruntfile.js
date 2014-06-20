@@ -9,11 +9,15 @@
 
 module.exports = function (grunt) {
 
+
+
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -139,9 +143,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/.tmp/styles/',
+          cwd: '<%= yeoman.app %>/styles/',
           src: '{,*/}*.css',
-          dest: '<%= yeoman.app %>/.tmp/styles/'
+          dest: '<%= yeoman.app %>/styles/'
         }]
       }
     },
