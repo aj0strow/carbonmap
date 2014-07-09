@@ -1,15 +1,9 @@
-// Generated on 2014-05-05 using generator-angular 0.8.0
-'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
+var fs = require('fs')
 
 module.exports = function (grunt) {
-
-
+  grunt.registerTask('seed', function () {
+    require('./data/seed')(this.async())
+  })
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -350,32 +344,6 @@ module.exports = function (grunt) {
       ]
     },
 
-    // By default, your `index.html`'s <!-- Usemin block --> will take care of
-    // minification. These next options are pre-configured if you do not wish
-    // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '<%= yeoman.app %>/.tmp/styles/{,*/}*.css',
-    //         '<%= yeoman.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
-
     // Test settings
     karma: {
       unit: {
@@ -425,7 +393,6 @@ module.exports = function (grunt) {
     'copy:dist',
     'cdnify',
     'cssmin',
-    //'uglify',
     'rev',
     'usemin',
     'htmlmin'
