@@ -6,13 +6,13 @@ var async = require('async')
 
 // libs
 
-var db = require('../server/db')
+var db = require('../db')
 var kingston = require('./kingston')
 
 module.exports = seed
 
 function seed (cb) {
-  kingston(function (e, objects) {
+  kingston(function (e, objects) {    
     if (e) return cb(e)
     async.each(objects, function (object, cb) {
       db.buildings.update(pick(object, 'id'), object, {
