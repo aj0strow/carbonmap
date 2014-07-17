@@ -4,9 +4,25 @@ Carb up, bro.
 
 [@aj0strow](https://github.com/aj0strow), [@subsumo](https://github.com/subsumo)
 
-### Primary Key
+### Environment
 
-Primary keys used on the Energy Kingston page and the service vary widely. To combat inconsistency, the primary key is always the dash-delimited abbreviated lowercase address.
+The application expects the following keys defined. 
+
+```
+MONGOLAB_URL
+TEMPODB_KEY
+TEMPODB_SECRET
+```
+
+### Scraping
+
+There are a few anomalies. 
+
+* 309 University Ave does not have an account id. It was combined with 307, so each house should claim half the utility consumption of 307. 
+
+* 374 Earl St and 376 have shared seed data on the kingston website. Each should use the combined 374376 page. 
+
+To combat inconsist primary keys, the server always uses the dash-delimited abbreviated lowercase address.
 
 ```javascript
 // Good
@@ -20,7 +36,7 @@ Primary keys used on the Energy Kingston page and the service vary widely. To co
 
 ### Schema
 
-#### Building
+#### buildings
 
 ```
 _id (bson id)
@@ -42,4 +58,17 @@ location
   state (string)
   stateCode (string)
 accountIds (array : string)
+```
+
+#### dailysums
+
+Node that `peak`, `midpeak`, and `offpeak` are in kWh. 
+
+```
+_id (bson id)
+accountId (string)
+date (string : YYYY-MM-DD)
+peak (float)
+midpeak (float)
+offpeak (float)
 ```

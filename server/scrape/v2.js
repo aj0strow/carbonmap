@@ -53,7 +53,7 @@ function scrape (accountId, options, cb) {
     console.error('(%s) find account', accountId)
     getAccounts(function (e, accounts) {
       if (e) { return cb(e) }
-      var account = findWhere(accounts, { accountId: accountId })
+      var account = findWhere(accounts, { accountId: +accountId })
       var path = account.url
 
       console.error('(%s) select account', accountId)
