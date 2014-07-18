@@ -36,7 +36,6 @@ function parse (text) {
 function parseLine (line) {
   var parts = line.split(/\s*\t/)
   var id = pk(parts[parts.length - 1])
-  if (/brock/.test(id)) console.log(id)
-  var accountId = +parts[0]
+  var accountId = parts[0].trim()
   return { id: id, accountId: accountId } 
 }

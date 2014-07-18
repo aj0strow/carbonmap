@@ -9,10 +9,14 @@ function daily (accountId, data, cb) {
 
 function transform (accountId, data) {
   var docs = []
+
   data.slice(1).forEach(function (row) {
+    var parts = row[0].trim().split('-')
+    var date = new Date(+parts[0], +parts[1], +parts[2])
+
     docs.push({
       accountId: accountId,
-      date: row[0].trim(),
+      date: date,
       peak: parseFloat(row[25]),
       midpeak: parseFloat(row[26]),
       offpeak: parseFloat(row[27])
