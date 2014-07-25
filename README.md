@@ -66,7 +66,7 @@ Node that `peak`, `midpeak`, and `offpeak` are in kWh.
 
 ```
 _id (bson id)
-accountId (string)
+accountIds (array : string)
 date (string : YYYY-MM-DD)
 peak (float)
 midpeak (float)

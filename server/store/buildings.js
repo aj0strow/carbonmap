@@ -1,6 +1,15 @@
-module.exports = primaryKey
+var ACCOUNTS = require('./accounts.json')
 
-function primaryKey (str) {
+module.exports = {
+  pk: pk,
+  accountIds: accountIds,
+}
+
+function accountIds (str) {
+  return ACCOUNTS[pk(str)]
+}
+
+function pk (str) {
   str = str.trim()
   str = str.toLowerCase()
   str = str.replace(/\s+/g, '-')

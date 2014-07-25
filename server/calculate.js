@@ -1,6 +1,9 @@
 var moment = require('moment')
 var async = require('async')
 
+// all the calculate methods should be called with a mongodb
+// calculate.method.call(db, args..., cb)
+
 module.exports = {
   weekPctChange: weekPctChange,
   weekSum: weekSum,

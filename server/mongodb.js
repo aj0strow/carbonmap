@@ -1,4 +1,3 @@
-require('dotenv').load()
 var mongojs = require('mongojs')
 
 var collections = [
@@ -6,6 +5,6 @@ var collections = [
   'dailysums',
 ]
 
-var db = mongojs(process.env.MONGOLAB_URL, collections)
+var db = mongojs(process.env.MONGOLAB_URI, collections)
 
 module.exports = db

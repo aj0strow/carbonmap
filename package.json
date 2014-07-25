@@ -13,7 +13,8 @@
     "express": "^4.5.1",
     "moment": "^2.7.0",
     "csv": "^0.4.0",
-    "tempodb": "^1.0.0"
+    "tempodb": "^1.0.0",
+    "utilitieskingston": "^0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
