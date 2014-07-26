@@ -1,7 +1,14 @@
 var pick = require('lodash').pick
 var merge = require('lodash').merge
 
-module.exports = present
+var mongodb = require('../mongodb')
+
+module.exports = function (req, res, next) {
+  mongodb.buildings.find(function (e, objects) {
+    if (e) { return next(e) }
+    res.json(objects.map(present))
+  })
+}
 
 function present (building) {
   var loc = building.location

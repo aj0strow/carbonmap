@@ -16,9 +16,9 @@ describe('calculate/dailysums', function () {
 
   describe('.sum', function () {
     it('should be correct', function (cb) {
-      dailysums.sum([ 'dailysums-0', 'dailysums-1' ], {
-        from: new Date(2014, 6, 1),
-        to: new Date(2014, 6, 2),
+      dailysums.sum({
+        accountId: { $in: [ 'dailysums-0', 'dailysums-1' ] },
+        date: { $lt: new Date(2014, 6, 2) },
       }, function (e, stats) {
         assert.equal(1.1, stats.peak)
         assert.equal(2.2, stats.midpeak)
@@ -33,9 +33,12 @@ describe('calculate/dailysums', function () {
     var expected = { peak: 0.0, midpeak: -0.5, offpeak: 1.0 }
 
     it('should be correct', function (cb) {
-      dailysums.pctChange([ 'dailysums-0', 'daiysums-1' ], {
-        from: new Date(2014, 6, 1),
-        to: new Date(2014, 6, 14),
+      dailysums.pctChange({
+        accountId: { $in: [ 'dailysums-0', 'dailysums-1' ] },
+        date: { $gt: new Date(2014, 6, 2) },
+      }, {
+        accountId: { $in: [ 'dailysums-0', 'dailysums-1' ] },
+        date: { $lt: new Date(2014, 6, 2) },
       }, function (e, stats) {
         assert.equal(0.0, stats.peak)
         assert.equal(-0.5, stats.midpeak)

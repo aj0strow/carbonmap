@@ -13,27 +13,20 @@ module.exports = {
 // then the pct change is 1.0 (increased 100%) while a change from 
 // 2 to 1 would be -0.5 (decreased 50%).
 //
-// options
-//   from (date) inclusive
-//   to (date) inclusive
-function pctChange (accountIds, options, cb) {
-  var from = options.from
-  var to = options.to
-  var midpoint = (from.getTime() + to.getTime()) / 2
+// pctChange({
+//   accountIds: { $in: [ 'ids' ] },
+//   date: { $gt: date, $lte: date },
+// }, {
+//   accountIds: { $in: [ 'ids' ] },
+//   date: { $gte: date, $lte: date },
+// }, cb)
 
+function pctChange (currQuery, prevQuery, cb) {
   async.parallel({
-
-    curr: function (cb) {
-      sum(accountIds, { from: new Date(midpoint + 1000), to: to }, cb)
-    },
-
-    prev: function (cb) {
-      sum(accountIds, { from: from, to: new Date(midpoint) }, cb)
-    },
-
+    curr: function (cb) { sum(currQuery, cb) },
+    prev: function (cb) { sum(prevQuery, cb) },
   }, function (e, results) {
     if (e) { return cb(e) }
-
     var stats = {}
     var keys = [ 'peak', 'midpeak', 'offpeak', 'total' ]
     keys.forEach(function (key) {
@@ -43,19 +36,15 @@ function pctChange (accountIds, options, cb) {
   })  
 }
 
-// options
-//   from (date) inclusive
-//   to (date) inclusive
-function sum (accountIds, options, cb) {
-  var from = options.from
-  var to = options.to
+// sum({
+//   accountId: { $in: [ 'ids' ] },
+//   date: { $gte: date, $lte: date },
+// }, cb)
 
+function sum (query, cb) {
   mongodb.dailysums.aggregate([
     {
-      $match: {
-        accountId: { $in: accountIds },
-        date: { $gte: from, $lte: to },
-      }
+      $match: query
     },
     {
       $group: {

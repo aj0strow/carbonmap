@@ -21,7 +21,7 @@ var q = async.queue(function (accountId, cb) {
 
 q.drain = function () {
   console.error('finished')
-  // process.exit(0)
+  process.exit(0)
 }
 
 mongodb.buildings.distinct('accountIds', function (e, ids) {
