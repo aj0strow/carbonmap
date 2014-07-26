@@ -9,6 +9,13 @@ module.exports = {
   sum: sum,
 }
 
+// pct change is a float, for example if the change is from 1 to 2
+// then the pct change is 1.0 (increased 100%) while a change from 
+// 2 to 1 would be -0.5 (decreased 50%).
+//
+// options
+//   from (date) inclusive
+//   to (date) inclusive
 function pctChange (accountIds, options, cb) {
   var from = options.from
   var to = options.to
@@ -36,7 +43,9 @@ function pctChange (accountIds, options, cb) {
   })  
 }
 
-// sum([ 'ids' ], options, func)
+// options
+//   from (date) inclusive
+//   to (date) inclusive
 function sum (accountIds, options, cb) {
   var from = options.from
   var to = options.to
