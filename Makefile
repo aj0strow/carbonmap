@@ -2,6 +2,6 @@
 all: test
 
 test:
-	@mocha server_test --recursive
+	@mocha server_test/helper server_test --recursive
 
 .PHONY: test
