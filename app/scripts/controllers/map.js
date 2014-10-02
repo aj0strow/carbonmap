@@ -7,8 +7,11 @@ var $ = jQuery || [];
 energyMap.factory('buildingsFactory', ['$http', function ($http) {
     return {
         getBuildings: function (callback) {
-            $http.get('/api/buildings/buildings.json').success(callback);
-        }
+            $http({method:'GET', url:'http://carbonsavings.herokuapp.com/buildings'})
+            .success(callback)
+            .error(function(data, status, headers, config) {
+                console.log('data') });
+            }
     };
 }])
     .factory('buildingFactory', ['$http', function ($http) {
@@ -72,17 +75,18 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
 
         buildingsFactory.getBuildings(function (results) {
 
-            results = _.sortBy(results, function (result) {
+            console.log(results);
+
+            /*results = _.sortBy(results, function (result) {
                 //element will be each array, so we just return a date from first element in it
                 return result.savings.lastMonth;
             });
-            $scope.buildings = results;
+*/
+            $scope.buildings = results.buildings;
             window.buildings = $scope.buildings;
 
-            angular.forEach(results, function (value) {
-                $scope.savingsOverview.fiveYear = 0;
-                $scope.savingsOverview.fiveYear += parseInt(value.savings.fiveYear);
-            });
+            $scope.savingsOverview = results.savings
+
         });
 
         var mapStyles = [{

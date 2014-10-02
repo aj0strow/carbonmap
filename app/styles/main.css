@@ -5335,12 +5335,17 @@ body {
   margin-bottom: -30px;
   background: white;
   border-radius: 10000px;
-  padding: 25px;
+  padding: 15px;
   position: relative;
   z-index: 100000000;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003102}}
+#logo img {
+  width: 100%;
+  height: auto;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003108}}
 body #mainPanel {
   transition: 1s opacity linear;
   height: 100%;
@@ -5348,24 +5353,24 @@ body #mainPanel {
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003119}}
 #mainPanel {
   background: #97c545;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003123}}
 #mainPanel hr {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003127}}
 #intro {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003133}}
 .divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 20px;
@@ -5377,7 +5382,7 @@ body #mainPanel {
   margin-top: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003143}}
 #mainPanel .building hr.divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin: 10px 0;
@@ -5389,36 +5394,40 @@ body #mainPanel {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003154}}
 .masthead {
   margin: 10px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003158}}
 .masthead hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003162}}
 .masthead h3 {
   font-size: 20px;
   text-align: center;
   font-family: 'minion-pro';
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   display: block;
   width: 100%;
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003171}}
 .masthead h3 small {
-  opacity: 0.2;
+  opacity: 0.4;
   margin-top: 5px;
   font-style: italic;
   line-height: 4px;
   font-size: 11px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003178}}
+.masthead h3#best {
+  font-size: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003182}}
 .masthead h4 {
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'ddt';
   font-weight: 600;
   text-align: center;
@@ -5427,13 +5436,13 @@ body #mainPanel {
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003191}}
 .masthead h4 span {
   opacity: 0.5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003194}}
 .masthead h4#reductionPercent {
-  font-size: 100px;
+  font-size: 60px;
   font-family: 'ddt';
   font-weight: 600;
   text-align: center;
@@ -5442,14 +5451,15 @@ body #mainPanel {
   margin: 10px 0 0 0;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003198}}
-.masthead h4 sup {
-  font-size: 30px;
-  position: absolute;
-  top: 30px;
-  opacity: 0.5;
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003205}}
+.masthead h4 sup {
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  margin-left: 10px;
+  opacity: 0.4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003213}}
 .masthead small {
   text-align: center;
   font-family: 'minion-pro';
@@ -5459,18 +5469,18 @@ body #mainPanel {
   width: 100%;
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003222}}
 .masthead small:first-of-type {
   padding-top: 0px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003228}}
 .buildingFeature {
   padding-bottom: 30px;
   text-align: center;
   border-radius: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003233}}
 .buildingFeature .building {
   background: white;
   color: black;
@@ -5479,14 +5489,14 @@ body #mainPanel {
   border-top: 1px solid #ddd;
   padding: 0px 10px 10px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003242}}
 .buildingFeature .building .glyphicon {
   color: black;
   opacity: 0.4;
   margin-top: 3px;
   margin-left: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003240}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003248}}
 .buildingFeature .building h6 {
   font-family: 'minion-pro';
   text-align: center;
@@ -5495,21 +5505,21 @@ body #mainPanel {
   color: black;
   margin-left: -5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003250}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003258}}
 .buildingFeature .building .savings {
   font-family: 'minion-pro';
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003255}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003263}}
 .buildingFeature .building .savings output {
   font-family: 'ddt';
   letter-spacing: 0px;
   padding-top: 0;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003270}}
 .buildingFeature .building .buildingBackground {
   border-radius: 1000px;
   width: 80%;
@@ -5518,7 +5528,7 @@ body #mainPanel {
   z-index: 1;
   margin-bottom: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003278}}
 .buildingFeature .building .buildingBackground .buildingOverlay {
   border: 7px solid rgba(255, 255, 255, 0.3);
   border-radius: 1000px;
@@ -5527,31 +5537,31 @@ body #mainPanel {
   background: rgba(151, 197, 69, 0.7);
   transition: 0.5s opacity ease-in-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003287}}
 .buildingFeature .building .buildingBackground .buildingOverlay.green {
   background: rgba(151, 197, 69, 0.7);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003290}}
 .buildingFeature .building .buildingBackground .buildingOverlay.red {
   background: rgba(255, 41, 50, 0.7);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003293}}
 .buildingFeature .building .buildingBackground .buildingOverlay.gray {
   background: rgba(90, 90, 90, 0.7);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003288}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003296}}
 .buildingFeature .building .buildingBackground .buildingOverlay:hover {
   opacity: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003290}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003298}}
 .buildingFeature .building .buildingBackground .buildingOverlay:hover output {
   opacity: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003300}}
 .buildingFeature .building .buildingBackground .buildingOverlay:hover output:hover {
   cursor: pointer !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003306}}
 .buildingFeature .building .buildingBackground .buildingOverlay output {
   transition: 0.5s opacity ease-in-out;
   position: absolute;
@@ -5567,7 +5577,7 @@ body #mainPanel {
   font-weight: bold;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003320}}
 .buildingFeature .building .buildingBackground .buildingOverlay output sup {
   position: absolute;
   margin-top: -23px;
@@ -5576,7 +5586,7 @@ body #mainPanel {
   top: 36%;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003334}}
 .buildingFeature .building .energyCharts {
   font-family: 'minion-pro';
   text-transform: uppercase;
@@ -5585,19 +5595,19 @@ body #mainPanel {
   letter-spacing: 1px;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003342}}
 .buildingFeature .building img {
   border-radius: 1000px;
   opacity: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003353}}
 #map {
   background: #323232;
   margin-bottom: 30px;
   height: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003357}}
 #map legend {
   background: white;
   position: fixed;
@@ -5613,21 +5623,41 @@ body #mainPanel {
   letter-spacing: 1px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003371}}
 #map legend h6 {
   font-family: 'minion-pro';
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003377}}
 #map legend small {
   text-transform: none;
   line-height: 100%;
   font-size: 7px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003382}}
+#map legend span {
+  padding-top: 2px;
+  padding-right: 2px;
+  font-size: 16px;
+  line-height: 5px;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003388}}
+#map legend span.green {
+  color: #90c237;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003391}}
+#map legend span.red {
+  color: #d82d35;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003394}}
+#map legend span.red {
+  color: #d82d35;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003404}}
 .circle {
   border-radius: 1000px;
   padding: 0;
@@ -5636,18 +5666,18 @@ body #mainPanel {
   font-family: "ddt";
   float: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003411}}
 .circle.large {
   margin: 0 auto;
   float: none;
   display: block;
   border: 8px solid #57a85b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003417}}
 .circle:not(.large) {
   border: 4px solid #57a85b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003420}}
 .circle span {
   font-size: 80px;
   position: absolute;
@@ -5662,11 +5692,11 @@ body #mainPanel {
   line-height: 0;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003410}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003434}}
 .circle span.small {
   font-size: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003439}}
 .circle span.doubleDigit:after {
   content: '%';
   opacity: 0.4;
@@ -5676,7 +5706,7 @@ body #mainPanel {
   right: 10%;
   position: absolute;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003450}}
 .circle span:after {
   content: '%';
   opacity: 0.4;
@@ -5687,115 +5717,115 @@ body #mainPanel {
   position: absolute;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003441}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003465}}
 .angular-google-map img {
   max-width: inherit;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003446}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003470}}
 .angular-google-map .glyphicon-map-marker:before {
   content: "\e062";
   position: absolute;
   bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003452}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003476}}
 .angular-google-map .glyphicon-map-marker.red {
   color: #ff2932;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003455}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003479}}
 .angular-google-map .glyphicon-map-marker.green {
   color: #97c545;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003458}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003482}}
 .angular-google-map .glyphicon-map-marker.gray {
   color: #505050;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003461}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003485}}
 .angular-google-map .glyphicon-map-marker.blue {
   color: #428bca;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003494}}
 .glyphicon-map-marker.red {
   color: #ff2932;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003473}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003497}}
 .glyphicon-map-marker.green {
   color: #97c545;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003476}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003500}}
 .glyphicon-map-marker.gray {
   color: #505050;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003482}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003506}}
 .mapMarker {
   position: absolute !important;
   width: 0;
   height: 0;
   overflow: visible;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003487}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003511}}
 .mapMarker.red {
   color: #ff2932;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003489}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003513}}
 .mapMarker.red h6 {
   border-color: #f7676e;
   background: #f7676e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003493}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003517}}
 .mapMarker.red .markerCircle {
   background: #d82d35;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003498}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003522}}
 .mapMarker.green {
   color: #97c545;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003500}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003524}}
 .mapMarker.green h6 {
   border-color: #99cc3f;
   background: #99cc3f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003504}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003528}}
 .mapMarker.green .markerCircle {
   background: #90c237;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003508}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003532}}
 .mapMarker.gray {
   color: #505050;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003510}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003534}}
 .mapMarker.gray h6 {
   border-color: #646464;
   background: #646464;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003514}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003538}}
 .mapMarker.gray .markerCircle {
   background: #5a5a5a;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003518}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003542}}
 .mapMarker.blue {
   transition: all 0.5s ease-in-out;
   color: #428bca !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003521}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003545}}
 .mapMarker.blue h6 {
   transition: all 0.5s ease-in-out;
   border-color: #82b9e9 !important;
   background: #82b9e9 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003550}}
 .mapMarker.blue .markerCircle {
   transition: all 0.5s ease-in-out;
   background: #5aa1df !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003532}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003556}}
 .mapMarker .markerCircle {
   position: absolute;
   z-index: 1;
   border-radius: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003537}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003561}}
 .mapMarker h6 {
   font-size: inherit;
   font-family: "ddt";
@@ -5812,12 +5842,12 @@ body #mainPanel {
   z-index: 2;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003556}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003580}}
 .mapMarker .glyphicon {
   height: 0;
   position: absolute;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003561}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003585}}
 .mapMarker a {
   position: absolute;
   top: 0;
@@ -5826,51 +5856,56 @@ body #mainPanel {
   color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003575}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003599}}
 #map {
   border-bottom: 3px solid #777;
   overflow: hidden;
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.2);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003580}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003604}}
 #building {
   position: fixed;
   z-index: 9999999999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003584}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003608}}
 .callout {
   text-align: center;
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003587}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003611}}
 .callout img {
   max-width: 60%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003590}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003614}}
 .callout h6 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003595}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003619}}
 footer {
   min-height: 80px;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003598}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003622}}
 footer img {
   max-width: 100px;
   margin: 0px 20px;
   max-height: 40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003603}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003627}}
 footer ul.nav {
-  padding: 20px 0;
+  padding: 15px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003630}}
+footer #awards h4 {
+  white-space: nowrap;
+  font-size: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003610}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003638}}
 .header,
 .marketing,
 .footer {
@@ -5879,7 +5914,7 @@ footer ul.nav {
 }
 
 /* Custom page header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003618}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003646}}
 h1 {
   font-weight: normal;
   text-stroke: 0.5px solid #97c545;
@@ -5891,13 +5926,13 @@ h1 {
   font-family: "ddt";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003628}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003656}}
 p {
   font-family: "ddt";
 }
 
 /* Make the masthead heading the same height as the navigation */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003634}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003662}}
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -5905,7 +5940,7 @@ p {
   padding-bottom: 19px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003641}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003669}}
 .angular-google-map-container {
   width: 66.6666666%;
   height: 90%;
@@ -5917,12 +5952,12 @@ p {
 /* Animations */
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003653}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003681}}
 #building [ui-view] {
   height: 65px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003656}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003684}}
 section#about, section#whatIsCarbonSavings {
   position: fixed;
   z-index: 100000000000000;
@@ -5934,7 +5969,7 @@ section#about, section#whatIsCarbonSavings {
   border-radius: 10px;
   box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003695}}
 section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .close {
   float: right;
   background: #97c545;
@@ -5946,23 +5981,24 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
   text-align: center;
   color: white !important;
   font-weight: bold;
+  text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003682}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003711}}
 #building .mapMarker {
   position: static !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003685}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003714}}
 #building .glyphicon-map-marker:before {
   content: '';
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003690}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003719}}
 .ui-view-container {
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003694}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003723}}
 #building [ui-view] section {
   width: 220px;
   height: 280px;
@@ -5972,11 +6008,29 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
   border-radius: 9px;
   padding: 0px 10px 10px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003704}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003732}}
+#building [ui-view] section .close {
+  background: #97c545;
+  padding: 6px;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white !important;
+  font-style: normal !important;
+  text-decoration: none;
+  position: absolute;
+  right: 3px;
+  top: 0px;
+  line-height: 7px;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003750}}
 #building [ui-view] section h2 {
   font-family: "ddt";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003707}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003753}}
 #building [ui-view] section p {
   font-family: 'minion-pro';
   white-space: normal;
@@ -5990,7 +6044,7 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
   position: relative;
   z-index: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003720}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003766}}
 #building [ui-view] section a {
   font-size: 11px;
   text-align: center;
@@ -6000,30 +6054,30 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003778}}
 #building [ui-view].ng-enter, #building [ui-view].ng-leave {
   position: absolute;
   transition: all .5s ease-in-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003737}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003783}}
 #building [ui-view].ng-enter {
   opacity: 0;
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003742}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003788}}
 #building [ui-view].ng-enter-active {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003747}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003793}}
 #building [ui-view].ng-leave {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003751}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003797}}
 #building [ui-view].ng-leave-active {
   opacity: 0;
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
@@ -6031,178 +6085,178 @@ section#about .modal-header .close, section#whatIsCarbonSavings .modal-header .c
 }
 
 /* Map Marker Rotations  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003760}}
-[data-building-id="1"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003806}}
+[data-building-id="10-aberdeen-st"] {
   -webkit-transform: rotate(120deg);
   transform: rotate(120deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003762}}
-[data-building-id="1"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003808}}
+[data-building-id="10-aberdeen-st"] h6 {
   -webkit-transform: rotate(-120deg);
   transform: rotate(-120deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003766}}
-[data-building-id="2"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003812}}
+[data-building-id="32-aberdeen-st"] {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003768}}
-[data-building-id="2"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003814}}
+[data-building-id="32-aberdeen-st"] h6 {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003772}}
-[data-building-id="4"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003818}}
+[data-building-id="241-alfred-st"] {
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003774}}
-[data-building-id="4"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003820}}
+[data-building-id="241-alfred-st"] h6 {
   -webkit-transform: rotate(-270deg);
   transform: rotate(-270deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003778}}
-[data-building-id="7"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003824}}
+[data-building-id="397-brock-st"] {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003780}}
-[data-building-id="7"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003826}}
+[data-building-id="397-brock-st"] h6 {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003785}}
-[data-building-id="6"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003831}}
+[data-building-id="287-alfred-st"] {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003787}}
-[data-building-id="6"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003833}}
+[data-building-id="287-alfred-st"] h6 {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003792}}
-[data-building-id="7"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003838}}
+[data-building-id="397-brock-st"] {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003795}}
-[data-building-id="7"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003841}}
+[data-building-id="397-brock-st"] h6 {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003800}}
-[data-building-id="8"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003846}}
+[data-building-id="404-brock-st"] {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003802}}
-[data-building-id="8"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003848}}
+[data-building-id="404-brock-st"] h6 {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003807}}
-[data-building-id="9"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003853}}
+[data-building-id="406-brock-st"] {
   -webkit-transform: rotate(235deg);
   transform: rotate(235deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003809}}
-[data-building-id="9"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003855}}
+[data-building-id="406-brock-st"] h6 {
   -webkit-transform: rotate(-235deg);
   transform: rotate(-235deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003814}}
-[data-building-id="11"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003860}}
+[data-building-id="30-garrett-st"] {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003816}}
-[data-building-id="11"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003862}}
+[data-building-id="30-garrett-st"] h6 {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003821}}
-[data-building-id="12"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003867}}
+[data-building-id="31-garrett-st"] {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003823}}
-[data-building-id="12"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003869}}
+[data-building-id="31-garrett-st"] h6 {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003828}}
-[data-building-id="15"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003874}}
+[data-building-id="31-nelson-st"] {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003830}}
-[data-building-id="15"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003876}}
+[data-building-id="31-nelson-st"] h6 {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003834}}
-[data-building-id="16"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003880}}
+[data-building-id="307-university-ave"] {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003836}}
-[data-building-id="16"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003882}}
+[data-building-id="307-university-ave"] h6 {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003841}}
-[data-building-id="17"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003887}}
+[data-building-id="309-university-ave"] {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003843}}
-[data-building-id="17"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003889}}
+[data-building-id="309-university-ave"] h6 {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003848}}
-[data-building-id="18"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003894}}
+[data-building-id="314-william-st"] {
   -webkit-transform: rotate(215deg);
   transform: rotate(215deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003850}}
-[data-building-id="18"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003896}}
+[data-building-id="314-william-st"] h6 {
   -webkit-transform: rotate(-215deg);
   transform: rotate(-215deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003854}}
-[data-building-id="19"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003900}}
+[data-building-id="318-william-st"] {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003856}}
-[data-building-id="19"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003902}}
+[data-building-id="318-william-st"] h6 {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003861}}
-[data-building-id="20"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003907}}
+[data-building-id="320-william-st"] {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003863}}
-[data-building-id="20"] h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jacob\/Work\/CAR001\%20-\%20Enery\%20Dashboard\/website\/carbonmap\/app\/styles\/main\.scss}line{font-family:\00003909}}
+[data-building-id="320-william-st"] h6 {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }

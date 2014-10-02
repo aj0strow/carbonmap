@@ -16,6 +16,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <base href="/">
   </head>
   <body ng-app="energyMap" id="state-{{$state.current.name | slugify}}">
 
@@ -33,7 +34,7 @@
     </nav>
 
       <footer class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-      <div class="row">
+      <div class="row" id="awards">
         <div class="col-sm-10 col-sm-push-1 col-sm-pull-1">
           <ul class="nav nav-pills nav-justified"> 
               <li><h4>Our Awards</h4></li>
@@ -52,8 +53,10 @@
       <div id="mainPanel" class="col-sm-4" ng-controller="MainCtrl">
 
           <div class="row">
-            <img class="col-sm-6 col-sm-push-3 " id="logo" src="../images/logoKingstonHousing.png">
-            </div> 
+            <div class="col-sm-6 col-sm-push-3" id="logo">
+              <img src="../images/logoKingstonHousing.png">
+            </div>
+          </div> 
 
         <div class="row">
 
@@ -63,11 +66,11 @@
         <h4 id="reductionPercent">2.5<sup>%</sup></h4>
 
         <h3 class="divider">Total Savings <small>since September 2005</small></h3>
-        <h4>{{ savingsOverview.fiveYear | intCurrency }}</h4>
+        <h4>{{ savingsOverview | intCurrency }}</h4>
         
 
 
-        <h3 class="divider">Best-Performing <br />Co-Ops <small>This Week</small></h3>
+        <h3 class="divider" id="best">Best-Performing Co-Ops <small>This Week</small></h3>
         <br class="clearfix" />
         </div>
       </div>
@@ -135,7 +138,6 @@
 
 
 
-    <!-- We'll also add some navigation: -->
     </div>
       
       
