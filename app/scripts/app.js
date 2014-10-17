@@ -11,8 +11,7 @@ var energyMap = angular.module('energyMap', [
     'ngFitText',
     'ui.router',
     'slugifier',
-    'google-maps',
-    'matchmedia-ng'
+    'leaflet-directive',
   ]).config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     
@@ -28,6 +27,20 @@ var energyMap = angular.module('energyMap', [
             controller: 'MainCtrl'
           }
         }
+      });
+
+      $stateProvider.state('map.home', {
+          url: '#home',
+          controller: function($scope, $location){
+            $location.hash('home')
+          }
+      });
+
+      $stateProvider.state('map.view', {
+          url: '#mapView',
+          controller: function($scope, $location){
+            window.location.hash = '#mapView';
+          }
       });
 
     $stateProvider.state('map.building', {
@@ -46,7 +59,12 @@ var energyMap = angular.module('energyMap', [
               templateUrl: 'partials/whatIsCarbonSavings.html'
             }
           },
-          url: 'what-is-carbon-savings'
+          url: 'what-is-carbon-savings',
+          controller: function($scope){
+              jQuery('.navbar').removeClass('in');
+              console.log(angular.element('.navbar'));
+              console.log('test');
+          }
         });
 
     $stateProvider.state('map.about', {
@@ -55,6 +73,10 @@ var energyMap = angular.module('energyMap', [
               templateUrl: 'partials/about.html',
             }
           },
-          url: 'about'
+          url: 'about',
+          controller: function($scope){
+              jQuery('.navbar').removeClass('in');
+                            console.log('test');
+          }
         });
   });

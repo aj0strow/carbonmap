@@ -1,5 +1,87 @@
 'use strict';
 
+window.typekitLoad('gci4xol');
+var energyMap = angular.module('energyMap', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'ngAnimate',
+    'underscore',
+    'ngFitText',
+    'ui.router',
+    'slugifier',
+    'leaflet-directive',
+  ]).config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+
+    
+    $locationProvider.html5Mode(true);
+    
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('map', {
+      url: '/',
+      views: {
+        'map': {
+            templateUrl: 'partials/map.html',
+            controller: 'MainCtrl'
+          }
+        }
+      });
+
+      $stateProvider.state('map.home', {
+          url: '#home',
+          controller: function($scope, $location){
+            $location.hash('home')
+          }
+      });
+
+      $stateProvider.state('map.view', {
+          url: '#mapView',
+          controller: function($scope, $location){
+            window.location.hash = '#mapView';
+          }
+      });
+
+    $stateProvider.state('map.building', {
+        views: {
+          'building': {
+              templateUrl: 'partials/building.html',
+              controller: 'BuildingCtrl'
+            }
+          },
+          url: 'building/:id'
+        });
+
+    $stateProvider.state('map.whatIsCarbonSavings', {
+        views: {
+          'whatIsCarbonSavings': {
+              templateUrl: 'partials/whatIsCarbonSavings.html'
+            }
+          },
+          url: 'what-is-carbon-savings',
+          controller: function($scope){
+              jQuery('.navbar').removeClass('in');
+              console.log(angular.element('.navbar'));
+              console.log('test');
+          }
+        });
+
+    $stateProvider.state('map.about', {
+        views: {
+          'about': {
+              templateUrl: 'partials/about.html',
+            }
+          },
+          url: 'about',
+          controller: function($scope){
+              jQuery('.navbar').removeClass('in');
+                            console.log('test');
+          }
+        });
+  });
+'use strict';
+
 var energyMap = energyMap || [];
 var google = google || [];
 var jQuery = jQuery || [];
@@ -533,3 +615,82 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
 
     }
 ]);
+'use strict';
+
+angular.module('energyMap').directive('horizontal', ['$stateParams',
+    function($stateParams) {
+
+        function link() {
+
+            var jQuery = jQuery || [];
+
+            jQuery(document).ready(function($) {
+
+                $('#building .mapMarker').remove();
+
+                $('*[data-building-id="' + $stateParams.id + '"]').clone().css({
+                    'top': 0,
+                    'left': 0
+                  }).css('z-index', '2').appendTo('#building');
+
+              });
+
+          }
+
+        return {
+            priority: 500,
+            link: link,
+            restrict: 'E'
+          };
+      }
+])
+
+angular.module('energyMap').directive('embuilding', ['$stateParams',
+    function($stateParams) {
+
+        function link() {
+
+            var jQuery = jQuery || [];
+
+            jQuery(document).ready(function($) {
+
+                $('#building .mapMarker').remove();
+
+                $('*[data-building-id="' + $stateParams.id + '"]').clone().css({
+                    'top': 0,
+                    'left': 0
+                  }).css('z-index', '2').appendTo('#building');
+
+                   $('*[data-building-id="' + $stateParams.id + '"]').closest('.building').addClass('blue');
+
+              });
+
+          }
+
+        return {
+            priority: 500,
+            link: link,
+            restrict: 'E'
+          };
+      }
+]).controller('BuildingCtrl', [
+    '$scope',
+    'buildingFactory',
+    'buildingColourFactory',
+    '_',
+    '$stateParams',
+    function($scope, buildingFactory, buildingColourFactory, _, $stateParams) {
+
+        $scope.abs = Math.abs;
+
+        $scope.building = {};
+
+        buildingFactory.getBuilding($stateParams.id, function(results) {
+
+            $scope.building = results;
+            $scope.building.colour = buildingColourFactory.getBuildingColour(results.savings.lastMonth);
+
+          });
+
+      }
+  ]);

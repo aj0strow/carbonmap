@@ -5,8 +5,8 @@
 		"description": "Meal plan house with 3 bathrooms and 7 bedrooms -1 small (fire escape room), 4 regular, and 2 medium.",
 		"url":"http://www.studenthousingkingston.ca/index.cfm/prospective-members/houses-rooms/10-aberdeen-street/",
 		"address": {
-			"streetName": "Claremount Street",
-			"streetNumber": "1455",
+			"streetName": "Alfred Street",
+			"streetNumber": "287",
 			"postalCode": "K2R3R4",
 			"city": "Kingston",
 			"province": "Ontario",
@@ -18,6 +18,6 @@
 		},
 		"savings": {
 			"fiveYear": "2223290" ,
-			"lastMonth": "3.1"
+			"lastMonth": "0.9"
 		}
 }

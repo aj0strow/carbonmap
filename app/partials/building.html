@@ -8,31 +8,30 @@
           <a class="close" ui-sref="map">x</a>
 
           <h6>
-            <span class="glyphicon glyphicon-map-marker">	
-            </span>{{ building.address.streetNumber }} {{ building.address.streetName}}<br />
-            "{{ building.name }}" 
+            <a ng-href="{{ building.url }}"><span class="glyphicon glyphicon-map-marker">	
+            </span>{{ building.address.streetNumber }} {{ building.address.streetName}}</a><br />
+
             
           </h6>
 
-          <div class="buildingBackground" style="background:url(images/buildings/{{ building.imageThumbnail }}); background-size:cover">
+          <div class="buildingBackground" style="background:url({{ building.imageLarge }}); background-size:cover">
             <div class="buildingOverlay">
 
-              <output>{{ building.savings.lastMonth }}<sup>%</sup></output>
+              <!-- <output>{{ building.savings.lastMonth }}<sup>%</sup></output> -->
 
 
 
-              <img width="100%" height="auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNg+M9QDwADgQF/e5IkGQAAAABJRU5ErkJggg==" />
+              <a ng-href="{{ building.url }}"><img width="100%" height="auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNg+M9QDwADgQF/e5IkGQAAAABJRU5ErkJggg==" /></a>
             </div>
           </div>
           
-          <br />
+           <br style="clear:both" />
           
-          <p>{{ building.description }}</p>
-          
+          <p><b>WEEKLY SAVINGS: <span ng-class="{ red: building.savings.lastMonth < 0, green: building.savings.lastMonth > 0 }"> {{ building.savings.lastMonth }}</span></b><small>%</small><br />{{ building.description }}</p>
           
 
           
-          <a ng-href="/building/{{ building.id }}">Via StudentHousingKingston.ca &raquo;</a>
+          
          
           
         </section>

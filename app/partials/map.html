@@ -1,4 +1,12 @@
+<script type="text/javascript">
+  
+jQuery('.navbar a').click(function(){
 
+  $('.navbar').removeClass('in');
+
+})
+
+</script>
     
    
 
@@ -12,12 +20,24 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
             </div>
-     
+   
+
+      <leaflet defaults="defaults" center="center" markers="markers" tiles="tiles" layers="layers" event-broadcast="events"></leaflet>
+   <!--  
     <google-map  center="map.center" zoom="map.zoom" draggable="true" events="map.events" options="map.options">
 
-
-
+<marker ng-repeat="building in buildings" coords='building.coordinates' ></marker>
+     
     </google-map>
+    -->
+
+     
+
+    <p id="description">
+
+        This map represents the Kingston Student Housing Co-operative's electricity consumption. It depicts the weekly change in usage at each building and within the context of the other co-op houses.
+        
+    </p>
 
     <legend>
 

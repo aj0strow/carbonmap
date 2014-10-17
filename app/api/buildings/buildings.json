@@ -1,442 +1,247 @@
-[
-   {
-      "id":"10-aberdeen-st",
-      "name":"10 Aberdeen Street",
-      "description":"7 Bedroom House which includes: 1 - Small, 4 - Regular, 2 - Medium, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/10-aberdeen-street/",
-      "coordinates":{
-         "latitude":44.230265,
-         "longitude":-76.49454759999999
+{
+  "buildings": [
+    {
+      "id": "10-aberdeen-st",
+      "coordinates": {
+        "latitude": 44.230265,
+        "longitude": -76.4945476
       },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Aberdeen Street",
-         "streetNumber":"10",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.4
+      }
+    },
+    {
+      "id": "32-aberdeen-st",
+      "coordinates": {
+        "latitude": 44.23082,
+        "longitude": -76.4943967
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/7B8708C0-FA51-41DF-850BE93F7C698011_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/7B8708C0-FA51-41DF-850BE93F7C698011_medium.jpg"
-   },
-   {
-      "id":"32-aberdeen-st",
-      "name":"32 Aberdeen Street",
-      "description":"7 Bedroom House which includes: 2 - Small, 3 - Regular (1 regular is a Fire Escape Room), 1 - Medium, and 1 - Large, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/32-aberdeen-st/",
-      "coordinates":{
-         "latitude":44.23082,
-         "longitude":-76.4943967
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 2.7
+      }
+    },
+    {
+      "id": "366-albert-st",
+      "coordinates": {
+        "latitude": 44.2326931,
+        "longitude": -76.5004123
       },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Aberdeen Street",
-         "streetNumber":"32",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -1.2
+      }
+    },
+    {
+      "id": "241-alfred-st",
+      "coordinates": {
+        "latitude": 44.2322967,
+        "longitude": -76.4970319
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/015720FD-0C87-47B4-A5858C78C96379D5_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/015720FD-0C87-47B4-A5858C78C96379D5_medium.jpg"
-   },
-   {
-      "id":"366-albert-st",
-      "name":"366 Albert Street",
-      "description":"10 Bedroom House which includes: 3 - Small, 2 - Regular, 2 - Medium, 2 - Large, and 1 - Extra Large, 3 - Bathrooms, 1 - Kitchen. This house is a mixed house and has meal and non meal plan rooms.",
-      "url":"/index.cfm/prospective-members/houses-rooms/366-albert-st/",
-      "coordinates":{
-         "latitude":44.2326931,
-         "longitude":-76.5004123
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0
+      }
+    },
+    {
+      "id": "285-alfred-st",
+      "coordinates": {
+        "latitude": 44.2336376,
+        "longitude": -76.4971585
       },
-      "address":{
-         "postalCode":"K7L 3V9",
-         "province":"Ontario",
-         "streetName":"Albert Street",
-         "streetNumber":"366",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -3.4
+      }
+    },
+    {
+      "id": "397-brock-st",
+      "coordinates": {
+        "latitude": 44.2325762,
+        "longitude": -76.4953046
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/C776DD58-5803-4FB3-A304333D72319849_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/C776DD58-5803-4FB3-A304333D72319849_medium.jpg"
-   },
-   {
-      "id":"241-alfred-st",
-      "name":"241 Alfred Street",
-      "description":"9 Bedroom House which includes: 1 - Small, 1 - Regular, 3 - Medium, 4 - Large, 3 - Bathrooms, and 2 - Kitchens.",
-      "url":"/index.cfm/prospective-members/houses-rooms/241-alfred-st/",
-      "coordinates":{
-         "latitude":44.2322967,
-         "longitude":-76.4970319
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -0.32
+      }
+    },
+    {
+      "id": "406-brock-st",
+      "coordinates": {
+        "latitude": 44.2325892,
+        "longitude": -76.4955756
       },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Alfred Street",
-         "streetNumber":"241",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -0.52
+      }
+    },
+    {
+      "id": "404-brock-st",
+      "coordinates": {
+        "latitude": 44.2325713,
+        "longitude": -76.4954545
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/F0B3772D-7DDD-43A9-94D6A4B1BEF264B8_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/F0B3772D-7DDD-43A9-94D6A4B1BEF264B8_medium.jpg"
-   },
-   {
-      "id":"285-alfred-st",
-      "name":"285 Alfred Street",
-      "description":"6 Bedroom, Non Meal Plan House which includes: 3 - Small, 2 - Regular, 1 - Medium, 2 - Bathrooms, and 2 - Kitchens.",
-      "url":"/index.cfm/prospective-members/houses-rooms/285-alfred-st/",
-      "coordinates":{
-         "latitude":44.23363759999999,
-         "longitude":-76.4971585
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -0.02
+      }
+    },
+    {
+      "id": "374-earl-st",
+      "coordinates": {
+        "latitude": 44.2296814,
+        "longitude": -76.4989057
       },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Alfred Street",
-         "streetNumber":"285",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.24
+      }
+    },
+    {
+      "id": "376-earl-st",
+      "coordinates": {
+        "latitude": 44.2296782,
+        "longitude": -76.4989738
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/3EC71008-5F67-4AAE-A456AA32B4330EE9_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/3EC71008-5F67-4AAE-A456AA32B4330EE9_medium.jpg"
-   },
-   {
-      "id":"287-alfred-st",
-      "name":"287 Alfred Street",
-      "description":"4 Bedroom House which includes: 2 - Small, 1 - Regular, 1 - Medium, 1 - Bathroom, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/287-alfred-st/",
-      "coordinates":{
-         "latitude":44.2336354,
-         "longitude":-76.497344
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.49
+      }
+    },
+    {
+      "id": "31-garrett-st",
+      "coordinates": {
+        "latitude": 44.2333459,
+        "longitude": -76.4954396
       },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Alfred Street",
-         "streetNumber":"287",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.34
+      }
+    },
+    {
+      "id": "373-johnson-st",
+      "coordinates": {
+        "latitude": 44.2315932,
+        "longitude": -76.4940083
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/CC0A1608-3C32-4B88-BC7BFF440B810BFB_small.png",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/CC0A1608-3C32-4B88-BC7BFF440B810BFB_medium.png"
-   },
-   {
-      "id":"397-brock-st",
-      "name":"397 Brock Street",
-      "description":"10 Bedroom House which includes: 2 - Small, 3 - Regular, 1 - Medium, and 4 - Large. 3 Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/397-brock-st/",
-      "coordinates":{
-         "latitude":44.2325762,
-         "longitude":-76.4953046
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.8
+      }
+    },
+    {
+      "id": "31-nelson-st",
+      "coordinates": {
+        "latitude": 44.232475,
+        "longitude": -76.501321
       },
-      "address":{
-         "postalCode":"K7L 1T1",
-         "province":"Ontario",
-         "streetName":"Brock Street",
-         "streetNumber":"397",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.46
+      }
+    },
+    {
+      "id": "307-university-ave",
+      "coordinates": {
+        "latitude": 44.2330399,
+        "longitude": -76.4954956
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/D4157A0B-48CF-4F50-9F897DBB463B6B1F_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/D4157A0B-48CF-4F50-9F897DBB463B6B1F_medium.jpg"
-   },
-   {
-      "id":"406-brock-st",
-      "name":"406 Brock Street",
-      "description":"9 Bedroom House which includes: 5 - Small, 1 - Regular, 1 - Medium, 1 - Large, and 1 - Extra Large, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/406-brock-st/",
-      "coordinates":{
-         "latitude":44.2325892,
-         "longitude":-76.4955756
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.3
+      }
+    },
+    {
+      "id": "309-university-ave",
+      "coordinates": {
+        "latitude": 44.2330809,
+        "longitude": -76.4954824
       },
-      "address":{
-         "postalCode":"K7L 1T1",
-         "province":"Ontario",
-         "streetName":"Brock Street",
-         "streetNumber":"406",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.32
+      }
+    },
+    {
+      "id": "314-william-st",
+      "coordinates": {
+        "latitude": 44.2304727,
+        "longitude": -76.4945826
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/4FB11243-CF8D-4330-BDD053F16981E683_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/4FB11243-CF8D-4330-BDD053F16981E683_medium.jpg"
-   },
-   {
-      "id":"404-brock-st",
-      "name":"404 Brock Street",
-      "description":"10 Bedroom House which includes: 1 - Small, 4 - Regular, 3 - Medium, 1 - Large, and 1 - Extra Large, 5 - Bathrooms, 3 - Kitchens. This house is a mixed house and has meal and non meal plan rooms.",
-      "url":"/index.cfm/prospective-members/houses-rooms/404-brock-street1/",
-      "coordinates":{
-         "latitude":44.2325713,
-         "longitude":-76.4954545
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.5
+      }
+    },
+    {
+      "id": "318-william-st",
+      "coordinates": {
+        "latitude": 44.2304656,
+        "longitude": -76.4947354
       },
-      "address":{
-         "postalCode":"K7L 1T1",
-         "province":"Ontario",
-         "streetName":"Brock Street",
-         "streetNumber":"404",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.23
+      }
+    },
+    {
+      "id": "320-william-st",
+      "coordinates": {
+        "latitude": 44.2304723,
+        "longitude": -76.4948132
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/9E892839-6FA6-49F3-96D7FAC10340DE87_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/9E892839-6FA6-49F3-96D7FAC10340DE87_medium.jpg"
-   },
-   {
-      "id":"374-earl-st",
-      "name":"374 Earl Street",
-      "description":"Non-meal plan house. Apartments A, B, C and D . Occupants at this location pay a $100/month premium.\r\nApartments:\r\nA - 2 small, 1 medium.   B - 2 small, 1 medium.  C - 2 medium and  D - 1 small, 1 regular. Each apartment has one bathroom.",
-      "url":"/index.cfm/prospective-members/houses-rooms/374376-earl-st-c-and-d/",
-      "coordinates":{
-         "latitude":44.2296814,
-         "longitude":-76.4989057
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": -3.5
+      }
+    },
+    {
+      "id": "323-william-st",
+      "coordinates": {
+        "latitude": 44.2307614,
+        "longitude": -76.4949756
       },
-      "address":{
-         "postalCode":"K7L 2J5",
-         "province":"Ontario",
-         "streetName":"Earl Street",
-         "streetNumber":"374",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.3
+      }
+    },
+    {
+      "id": "287-alfred-st",
+      "coordinates": {
+        "latitude": 44.2336354,
+        "longitude": -76.497344
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/3009D663-2A45-4C4F-B89DCD4F88684B3E_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/3009D663-2A45-4C4F-B89DCD4F88684B3E_medium.jpg"
-   },
-   {
-      "id":"376-earl-st",
-      "name":"376 Earl Street",
-      "description":"Non-meal plan house. Apartments A, B, C and D . Occupants at this location pay a $100/month premium.\r\nApartments:\r\nA - 2 small, 1 medium.   B - 2 small, 1 medium.  C - 2 medium and  D - 1 small, 1 regular. Each apartment has one bathroom.",
-      "url":"/index.cfm/prospective-members/houses-rooms/374376-earl-st-c-and-d/",
-      "coordinates":{
-         "latitude":44.2296782,
-         "longitude":-76.4989738
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.9
+      }
+    },
+    {
+      "id": "30-garrett-st",
+      "coordinates": {
+        "latitude": 44.233343,
+        "longitude": -76.4956034
       },
-      "address":{
-         "postalCode":"K7L 2J5",
-         "province":"Ontario",
-         "streetName":"Earl Street",
-         "streetNumber":"376",
-         "city":"Kingston",
-         "country":"Canada"
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.576
+      }
+    },
+    {
+      "id": "29-nelson-st",
+      "coordinates": {
+        "latitude": 44.2324396,
+        "longitude": -76.5012931
       },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/3009D663-2A45-4C4F-B89DCD4F88684B3E_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/3009D663-2A45-4C4F-B89DCD4F88684B3E_medium.jpg"
-   },
-   {
-      "id":"30-garrett-st",
-      "name":"30 Garrett Street",
-      "description":"8 Bedroom House which includes: 2 - Small, 2 - Regular, 4 - Medium, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/30-garrett-st/",
-      "coordinates":{
-         "latitude":44.233343,
-         "longitude":-76.4956034
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Garrett Street",
-         "streetNumber":"30",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/14FB8FBF-6FAD-4887-8BBD3EE7EFF6D967_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/14FB8FBF-6FAD-4887-8BBD3EE7EFF6D967_medium.jpg"
-   },
-   {
-      "id":"31-garrett-st",
-      "name":"31 Garrett Street",
-      "description":"7 Bedroom House which includes: 1 - Extra -Small (Fire Escape Room), 2 - Regular, 3 - Medium, and 1 - Extra Large, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/31-garrett-st/",
-      "coordinates":{
-         "latitude":44.2333459,
-         "longitude":-76.4954396
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"Garrett Street",
-         "streetNumber":"31",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/21993FC3-AD54-4399-8C13D8F0EE2CCB58_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/21993FC3-AD54-4399-8C13D8F0EE2CCB58_medium.jpg"
-   },
-   {
-      "id":"373-johnson-st",
-      "name":"373 Johnson Street",
-      "description":"8 Bedroom House which includes: 1 - Small, 1 - Extra Small, 4 - Regular, 1 - Medium, and 1 - Jumbo, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/373-johnson-st/",
-      "coordinates":{
-         "latitude":44.2315932,
-         "longitude":-76.49400829999999
-      },
-      "address":{
-         "postalCode":"K7L 1Y8",
-         "province":"Ontario",
-         "streetName":"Johnson Street",
-         "streetNumber":"373",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/268DF3D9-41BF-4D90-89C4BDAAB4026CBD_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/268DF3D9-41BF-4D90-89C4BDAAB4026CBD_medium.jpg"
-   },
-   {
-      "id":"29-nelson-st",
-      "name":"29 Nelson Street",
-      "description":"6 Bedroom Non Meal Plan House which includes: 1 - Small, 2 - Medium (1 - Medium is a Fire Escape Room), 2 - Large, and 1 - Jumbo, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/29-nelson-st/",
-      "coordinates":{
-         "latitude":44.2324396,
-         "longitude":-76.5012931
-      },
-      "address":{
-         "postalCode":"K7L 3W5",
-         "province":"Ontario",
-         "streetName":"Nelson Street",
-         "streetNumber":"29",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/13B9F7F8-07F7-4768-A8817C6FE8B93633_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/13B9F7F8-07F7-4768-A8817C6FE8B93633_medium.jpg"
-   },
-   {
-      "id":"31-nelson-st",
-      "name":"31 Nelson Street",
-      "description":"6 Bedroom Non Meal Plan House which includes: 1 - Small, 2 - Regular, 2 - Medium, and 1 - Extra Large, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/31-nelson-st/",
-      "coordinates":{
-         "latitude":44.232475,
-         "longitude":-76.50132099999999
-      },
-      "address":{
-         "postalCode":"K7L 3W5",
-         "province":"Ontario",
-         "streetName":"Nelson Street",
-         "streetNumber":"31",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/653D53CC-7C54-4BAA-B379606B1ADBD296_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/653D53CC-7C54-4BAA-B379606B1ADBD296_medium.jpg"
-   },
-   {
-      "id":"307-university-ave",
-      "name":"307 University Avenue",
-      "description":"9 Bedroom House which includes: 2 - Regular, 1 - Medium, 3 - Large, 2 - Extra Large, and 1 Jumbo, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/307-university-ave/",
-      "coordinates":{
-         "latitude":44.2330399,
-         "longitude":-76.4954956
-      },
-      "address":{
-         "postalCode":"K7L 3R2",
-         "province":"Ontario",
-         "streetName":"University Avenue",
-         "streetNumber":"307",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/1F3E144F-E5CA-4846-8606E1634E5BD727_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/1F3E144F-E5CA-4846-8606E1634E5BD727_medium.jpg"
-   },
-   {
-      "id":"309-university-ave",
-      "name":"309 University Avenue",
-      "description":"8 Bedroom House which includes: 1 - Small, 3 - Medium, 2 - Large, 1 - Extra Large, and 1 - Jumbo, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/309-university-ave/",
-      "coordinates":{
-         "latitude":44.2330809,
-         "longitude":-76.4954824
-      },
-      "address":{
-         "postalCode":"K7L 3R2",
-         "province":"Ontario",
-         "streetName":"University Avenue",
-         "streetNumber":"309",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/3F57D860-095B-499B-AB2C6C0D49B1FBBB_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/3F57D860-095B-499B-AB2C6C0D49B1FBBB_medium.jpg"
-   },
-   {
-      "id":"314-william-st",
-      "name":"314 William Street",
-      "description":"7 Bedroom Non Meal Plan House which includes: 4 - Medium, 1 - Large, and 2 - Extra Large, 2 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/314-william-st/",
-      "coordinates":{
-         "latitude":44.2304727,
-         "longitude":-76.4945826
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"William Street",
-         "streetNumber":"314",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/81162744-1395-45E6-974C13A9A33E8206_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/81162744-1395-45E6-974C13A9A33E8206_medium.jpg"
-   },
-   {
-      "id":"318-william-st",
-      "name":"318 William Street",
-      "description":"11 Bedroom House which includes: 3 - Small (1 small is Fire Escape Room), 3 - Regular, 2 - Medium, 2 - Large, and 1 - Extra Large, 4 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/318-william-street/",
-      "coordinates":{
-         "latitude":44.2304656,
-         "longitude":-76.4947354
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"William Street",
-         "streetNumber":"318",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/7F8D2694-ADB8-484D-9FE2DE8BAC1ECED2_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/7F8D2694-ADB8-484D-9FE2DE8BAC1ECED2_medium.jpg"
-   },
-   {
-      "id":"320-william-st",
-      "name":"320 William Street",
-      "description":"9 Bedroom House which includes: 3 - Regular, 3 - Large, and 3 - Extra Large, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/320-william-st/",
-      "coordinates":{
-         "latitude":44.2304723,
-         "longitude":-76.4948132
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"William Street",
-         "streetNumber":"320",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/FF21C13B-53D3-4DE9-8F85A8EAF672C4B2_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/FF21C13B-53D3-4DE9-8F85A8EAF672C4B2_medium.jpg"
-   },
-   {
-      "id":"323-william-st",
-      "name":"323 William Street",
-      "description":"9 Bedroom House which includes: 1 - Extra Small, 3 - Regular, 3 - Medium, and 2 - Large, 3 - Bathrooms, 1 - Kitchen.",
-      "url":"/index.cfm/prospective-members/houses-rooms/323-william-st/",
-      "coordinates":{
-         "latitude":44.2307614,
-         "longitude":-76.4949756
-      },
-      "address":{
-         "postalCode":"K7L",
-         "province":"Ontario",
-         "streetName":"William Street",
-         "streetNumber":"323",
-         "city":"Kingston",
-         "country":"Canada"
-      },
-      "imageThumbnail":"http://www.studenthousingkingston.ca/default/cache/file/161468E9-0128-4F20-B89B6975B1C2E06D_small.jpg",
-      "imageLarge":"http://www.studenthousingkingston.ca/default/cache/file/161468E9-0128-4F20-B89B6975B1C2E06D_medium.jpg"
-   }
-]
+      "savings": {
+        "fiveYear": 164200,
+        "lastMonth": 0.19
+      }
+    }
+  ],
+  "savings": 164200
+}

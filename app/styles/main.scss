@@ -1,5 +1,5 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
-
+@import "compass/css3";
 // Colours
 
 $colorRed: rgb(255,41,50);
@@ -22,28 +22,31 @@ $fontCarbonSavings: "letter-gothic-std";
 $fontSansSerif: "ddt";
 $fontSerif: "minion-pro";
 
+// https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html 
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+ 
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
 
 
-@media only screen and (max-width:1024px) and (orientation:portrait) {
-    body > * {
-        display:none;
-    }
-    html body {
-        background-image:url(../images/rotate.jpg);
-        background-position:center center;
-        background-repeat:no-repeat;
-        background-size:contain;
-    }
-    html, body {
-        width:100%;
-        height:100%;
-        overflow:hidden;
-    }
-}
 
 
 .browsehappy {
@@ -54,15 +57,52 @@ $fontSerif: "minion-pro";
 }
 html {
     height:100%;
+    background:#141414;
 }
 /* Space out content a bit */
 body {
     height:100%;
-    background:#97c545;
     font-family: $fontSerif;
-    min-width:1024px;
+    & p {
+        font-family:'minion-pro';
+    }
 }
 
+.leaflet-bottom {
+    display:none;
+}
+.leaflet-div-icon {
+    background: none !important;
+    border: 0px !important;
+    position:relative;
+        & div {
+            position: absolute;
+            bottom: 0;
+            transform-origin: 50% 100%;
+        }
+        & img {
+            position: absolute;
+            bottom: 0;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            outline:3px solid transparent;
+        }
+        & h6 {
+             position: absolute;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            width: 100%;
+            text-align: center;
+            line-height: 0;
+            top: 37%;
+            margin: 0;
+            color: white;
+            font-family: 'ddt';
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+            letter-spacing: 0.5px;
+            font-size: 12px !important;
+        }
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 
@@ -73,6 +113,7 @@ body {
     margin-top:0;
     margin-bottom:0px !important;
     height:40px;
+    background:none;
     & li a {
         color:white;
         font-family:'minion-pro';
@@ -84,17 +125,68 @@ body {
         }
     }
 }
+
+.navbar-fixed-top .nav-pills {
+margin: 30px;
+}
+#masthead hr.small {
+    display:none;
+}
+
+
+[ui-sref='map.view'], [ui-sref="map.home"]  {
+        visibility:hidden;
+}
+
+
+
+
+/* active buttons */
+#state-mapabout a[ui-sref="map.about"] {
+    color:black;
+}
+#state-mapwhatiscarbonsavings a[ui-sref="map.whatIsCarbonSavings"] {
+    color:black;
+}
+.nav-pills li a {
+    background-color:rgba(0,0,0,0.3);
+    transition: all ease-in-out 0.3s;
+    transform:rotateY(0deg);
+    color:white;
+    text-transform:uppercase;
+    border: 3px double white;
+    border-radius:0px;
+    margin-left: -3px;
+
+    & .label {
+        display:inline-block;
+        font-size: 12px;
+    }  
+
+    &[ui-sref="map.whatIsCarbonSavings"] {
+        border-left:0;
+    }
+
+    &:hover {
+        color:black;
+        background-color:rgba(255,255,255,1);
+    }
+
+    
+}
+
+
 .navbar-fixed-bottom {
-    background:white;
-    height:10%;
-    width: 66.666667%;
-    right: 0px !important;
-    left: auto;
+height: 67px;
+right: 0;
+color: white;
+text-transform: uppercase;
+font-size: 10px;
 }
 #logo {
     margin:20px 0;
-    margin-bottom:-30px;
-    background: white;
+    margin-bottom:-10px;
+    opacity:1;
     border-radius: 10000px;
     padding: 15px;
     position:relative;
@@ -107,9 +199,14 @@ body {
 
 body #mainPanel {
     transition:1s opacity linear;
-    height:100%;
     z-index:10000;
     position:relative;
+    & p {
+        font-family: 'minion-pro';
+        font-size: 13px;
+        text-align: center;
+        line-height: 15px;
+    }
 }
 body#state-mapbuilding #mainPanel {
 }
@@ -117,9 +214,11 @@ body#state-map #mainPanel {
 }
 
 #mainPanel {
-    background:rgb(151,197,69);
-    text-shadow:0px 1px 0px rgba(255,255,255,0.3);
-
+    @include filter-gradient(#141414, #000000, horizontal); // IE6-9
+    @include background-image(linear-gradient(left, rgba(20,20,20,1) 0%,rgba(14,14,14,1) 30%,rgba(0,0,0,0) 100%));
+    text-shadow: 0px 1px 0px rgba(0,0,0,1);
+    padding-left:70px;
+    color: #B3B3B3;
     & hr {
         margin:0;
     }
@@ -132,7 +231,7 @@ body#state-map #mainPanel {
 
 .divider {
     border-top: 1px solid rgba(0,0,0,0.1);
-    padding-top: 20px;
+    padding-top: 0px;
     text-align:center;
     text-transform:uppercase;
     letter-spacing:3px;
@@ -140,6 +239,7 @@ body#state-map #mainPanel {
     display:block;
     margin-top:10px;
 }
+
 #mainPanel .building hr.divider {
     border-top: 1px solid rgba(0,0,0,0.1);
     margin:10px 0;
@@ -149,11 +249,21 @@ body#state-map #mainPanel {
     letter-spacing:3px;
     font-family:'minion-pro';
     display:block;
+
+}
+h3 {
+    font-size: 24px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .masthead {
-
+    border:3px double rgba(255,255,255,0.8);
     margin:10px 0;
+    box-shadow: 10px 10px 100px rgba(0,0,0,1);
+    background: rgba(19,19,19,0.7);
+    padding-top: 10px;
 
     & hr {
         border-top: 1px solid rgba(0,0,0,0.1);
@@ -174,6 +284,7 @@ body#state-map #mainPanel {
             font-style: italic;
             line-height: 4px;
             font-size:11px;
+            color: rgb(123, 123, 123);
         }
         &#best {
             font-size:16px;
@@ -217,42 +328,60 @@ body#state-map #mainPanel {
         letter-spacing:3px;
         display:block;
         width:100%;
-        color:black;
+        color: #aaa;
     }
     & small:first-of-type {
         padding-top:0px;
     }
 
 }
+#state-mapbuilding #map .buildingOverlay {
+    box-shadow: none !important;
+    background: none !important;
+    border:1px solid #ccc;
+}
+#state-mapbuilding #map .buildingOverlay h6 {
+    min-height:auto;
+}
+
+
+
+
+#section.buildingFeature {
+    color:black;
+}
 
 .buildingFeature {
-    padding-bottom:30px;
+    padding-bottom:0px;
     text-align:center;
-    border-radius:10px;
 
     & .building {
-
-        background:white;
-        color:black;
-        border-radius: 14px;
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
-        border-top:1px solid #ddd;
+        color:white;
         padding:0px 10px 10px 10px;
 
         & .glyphicon {
-        color: black;
-        opacity: 0.4;
+        color: #aaa;
+        opacity: 1;
         margin-top: 3px;
         margin-left: 4px;
         }
         & h6 {
-            font-family:'minion-pro';
-            text-align:center;
-            letter-spacing:1px;
+            font-family: 'minion-pro';
+            text-align: center;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            color:black;
-            margin-left:-5px;
-
+            color: white;
+            margin-left: 4px;
+            margin-right: 4px;
+            min-height: 26px;
+            margin-top: 17px;
+            margin-bottom: 5px;
+        }
+        & .red {
+            color: $colorRed;
+        }
+        & .green {
+            color: $colorGreen;
         }
 
         & .savings {
@@ -277,11 +406,12 @@ body#state-map #mainPanel {
             
             & .buildingOverlay {
 
-                border: 7px solid rgba(255,255,255, 0.3);
                 border-radius: 1000px;
                 position: relative;
                 margin-bottom: 8px;
-                background: rgba(151, 197, 69, 0.7);
+                background: rgba(0,0,0,0.5);
+                box-shadow: inset 0px 0px 40px rgba(0,0,0,0.5);
+                /* background: rgba(151, 197, 69, 0.7); 
                 transition:0.5s opacity ease-in-out;
 
                 &.green {
@@ -302,6 +432,7 @@ body#state-map #mainPanel {
                         }
                     }
                 }
+                */
 
                 & output {
                 transition:0.5s opacity ease-in-out;
@@ -309,21 +440,20 @@ body#state-map #mainPanel {
                 width: 100%;
                 height: 100%;
                 top: 50%;
-                margin-top: -36px;
-                font-size: 40px;
+                margin-top: -19px;
+                font-size: 20px;
                 font-weight: bold;
                 text-align: center;
-                color: white;
                 font-family: 'ddt';
                 font-weight:bold;
                 text-shadow:0px 2px 5px rgba(0,0,0,0.3);
                     & sup {
-                        position:absolute;
-                        margin-top:-23px;
-                        font-size:50%;
-                        opacity:0.5;
-                        top:36%;
-                        font-weight:normal;
+                        position: absolute;
+                        margin-top: 13px;
+                        font-size: 50%;
+                        opacity: 0.5;
+                        top: 0;
+                        font-weight: normal;
                     }
                 }
             }
@@ -354,25 +484,37 @@ body#state-map #mainPanel {
     background:#323232;
     margin-bottom:30px;
     height:0;
+    & #description {
+        position: fixed;
+        bottom: 59px;
+        width: 332px;
+        color: white;
+        z-index: 1000;
+        right: 198px;
+        font-size: 12px;
+        text-align: right;
+        line-height: 17px;
+    }
     & legend {
-            background: white;
-            position: fixed;
-            bottom: 11%;
-            height: 157px;
-            width: 135px;
-            right: 20px;
-            border-radius: 10px;
-            padding: 5px 13px;
-            font-size: 12px;
+        background: #131313;
+        position: fixed;
+        bottom: 50px;
+        height: 147px;
+        width: 148px;
+        right: 32px;
+        padding: 5px 13px;
+        font-size: 13px;
+        font-family: 'minion-pro';
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 3px double white;
+        font-weight: normal !important;
+        color: #B3B3B3;
+        & h6 {
             font-family: 'minion-pro';
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
-        & h6 {
-            font-family:'minion-pro';
-            text-transform:uppercase;
-            letter-spacing:3px;
-            font-weight:bold;
+            letter-spacing: 3px;
+            font-weight: normal;
         }
         & small {
             text-transform:none;
@@ -627,9 +769,16 @@ footer {
     & ul.nav {
         padding:15px 0;
     }
-    & #awards h4 {
+    & #awards {
+
+        & h4 {
         white-space:nowrap;
         font-size:100%;
+        }
+        & img {
+            opacity:0.7;
+        }
+
     }
 }
 
@@ -666,13 +815,18 @@ p {
     padding-bottom: 19px;
 }
 
-.angular-google-map-container { 
-    width: 66.6666666%;
-    height: 90%;
+.angular-leaflet-map { 
+    width: 100%;
+    height: 100%;
     position:fixed !important;
-    top:40px;
-    left:33.333%;
+    top:0;
+    left:0;
 } 
+.leaflet-layer:nth-child(1) {
+z-index: 1 !important;
+opacity: 0.5;
+z-index:1;
+}
 
 /* Animations */
 
@@ -681,20 +835,41 @@ to prevent collapsing during animation*/
 #building [ui-view]{
  height: 65px; 
 }
+
+#state-mapwhatiscarbonsavings , #state-mapabout {
+
+    & .angular-leaflet-map, legend, #description, #mainPanel, footer {
+         transition:all ease-in-out 2s;
+     }
+
+        & .angular-leaflet-map, legend, #description, #mainPanel, footer {
+         -webkit-filter: blur(10px);
+         -moz-filter: blur(10px);
+         -o-filter: blur(10px);
+         -ms-filter: blur(10px);
+         filter: blur(10px); 
+     }
+}
+
+
+
 section#about, section#whatIsCarbonSavings {
+   
     position: fixed;
     z-index: 100000000000000;
-    left: 33.3333%;
-    top: 10%;
-    margin-left: 110px;
-    margin-right: 110px;
+    top: 100px;
+    margin-right: 30px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 12px 20px rgba(0,0,0,0.4);
+    width: 600px;
+    right: 0;
+
+    & > div > .ng-scope {
+        border: 3px double black;
+    }
 
     & .modal-header .close {
         float: right;
-        background: $colorGreen;
+        background: black;
         padding: 6px;
         border-radius: 100px;
         width: 30px;
@@ -702,8 +877,10 @@ section#about, section#whatIsCarbonSavings {
         box-sizing: border-box;
         text-align: center;
         color: white !important;
-        font-weight: bold;
-        text-decoration:none;
+        text-decoration: none;
+        font-family: 'ddt';
+        font-size: 25px;
+        line-height: 19px;
     }
 }
 
@@ -721,16 +898,17 @@ section#about, section#whatIsCarbonSavings {
 }
 
 #building [ui-view] section {
-     width: 220px;
-    height: 280px;
+    width: 220px;
     position: absolute;
     left: -210px;
     top: -160px;
-    border-radius: 9px;
+    border-radius: 0;
     padding: 0px 10px 10px 10px;
+    background: white;
+    border: 3px double #191919;
 
     &  .close {
-        background: #97c545;
+        background: black;
         padding: 6px;
         border-radius: 100px;
         width: 20px;
@@ -742,9 +920,10 @@ section#about, section#whatIsCarbonSavings {
         text-decoration: none;
         position: absolute;
         right: 3px;
-        top: 0px;
-        line-height:7px;
+        top: 3px;
+        line-height:5px;
         font-weight:normal;
+        font-family:'ddt';
     }
 
     & h2 {
@@ -763,13 +942,29 @@ section#about, section#whatIsCarbonSavings {
         position: relative;
         z-index: 0;
     }
-    & a {
-        font-size: 11px;
+    
+    & h6 a {
+        font-family: 'minion-pro';
         text-align: center;
-        margin-bottom: 10px;
-        display: block;
-        margin-top: -7px;
-        font-style:italic;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: black;
+        font-size: 14px;
+        font-style: italic;
+        margin-right: 5px;
+        margin-left: 5px;
+        text-decoration:none;
+        line-height: 13px;
+        padding-right: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 13px;
+        cursor:default;
+
+    }
+    &  h6 a:hover {
+        text-decoration:none;
+        cursor:default;
     }
 }
 
@@ -802,6 +997,8 @@ section#about, section#whatIsCarbonSavings {
 }
 
 /* Map Marker Rotations  */
+
+
 
 [data-building-id="10-aberdeen-st"] {
     transform:rotate(120deg);
@@ -910,4 +1107,221 @@ section#about, section#whatIsCarbonSavings {
         transform:rotate(90deg);
     }
 }
+
+section#whatIsCarbonSavings #awards {
+    display:none;
+}
+hr.small {
+    display:none;
+}
+
+@media screen and (max-width:1024px) {
+    .masthead h4 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    [ui-sref='map.view'], [ui-sref="map.home"]  {
+        visibility:visible;
+    }
+
+    #building [ui-view] section {
+        width: 240px;
+        position: fixed;
+        left: 50%;
+        top: 50px;
+        border-radius: 0;
+        padding: 0px 10px 10px 10px;
+        background: white;
+        border: 3px double #191919;
+        margin-left: -120px;
+    }
+
+    footer {
+        display:none;
+    }
+    #awards img {
+        width:80%;
+        margin:0 auto;
+    }
+    #awards {
+        background: #141414;
+        padding: 30px;
+    }
+
+    section#about, section#whatIsCarbonSavings {
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        margin-right: 30px;
+        background: white;
+        width: 100%;
+        right: 0;
+        height: 100%;
+        margin: 0;
+        overflow: scroll;
+        background: #141414;
+        & .close {
+            display:none !important;
+        }
+    }
+    .modal-header h3 {
+        width:80%;
+    }
+
+
+    div[ui-view="whatIsCarbonSavings"], div[ui-view="about"] {
+        background: white;
+    }
+    #state-map #whatIsCarbonSavings, #state-map #about, #state-maphome #whatIsCarbonSavings, #state-maphome #about, #state-mapbuilding #whatIsCarbonSavings, #state-mapbuilding #about {
+        display:none;
+    }
+    #state-mapabout #whatIsCarbonSavings {
+        display: none;
+    }
+    #state-mapwhatiscarbonsavings #about {
+        display:none;
+    }
+    #state-mapbuilding #mainPanel {
+        display:none;
+    } 
+
+    #state-mapwhatiscarbonsavings , #state-mapabout {
+
+    & .angular-leaflet-map, legend, #description, #mainPanel, footer {
+         transition:all ease-in-out 2s;
+     }
+
+        & .angular-leaflet-map, legend, #description, #mainPanel, footer {
+         -webkit-filter: blur(0px);
+         -moz-filter: blur(0px);
+         -o-filter: blur(0px);
+         -ms-filter: blur(0px);
+         filter: blur(0px); 
+         display:none;
+     }
+}
+
+    .row {
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+    .masthead h4 {
+        font-size: 40px !important;
+    }
+
+    .masthead {
+         box-shadow: none;
+         background: none;
+    }
+
+    #mainPanel hr.small {
+        width:30%;
+        margin:0 auto;
+        opacity:0.3;
+
+    }
+
+    #awards {
+    }
+
+    #logo img {
+        width: 90px !important;
+        height: auto !important;
+        left: 50%;
+        position: absolute;
+        margin-left: -45px;
+        top: -14px;
+    }
+    #logo {
+        padding: 21px;
+        opacity:1;
+        margin-top:10px;
+        height:80px;
+    }
+    body #mainPanel {
+        margin: 0 auto 200% auto;
+        width:100%;
+        padding:0;
+        border-bottom: 0px;
+
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkzJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(19,19,19,1) 80%, rgba(19,19,19,0.8) 93%, rgba(19,19,19,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(19,19,19,1)), color-stop(80%,rgba(19,19,19,1)), color-stop(93%,rgba(19,19,19,0.8)), color-stop(100%,rgba(19,19,19,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb131313', endColorstr='#00131313',GradientType=0 ); /* IE6-8 */
+
+    }
+
+    .masthead {
+        border:0px !important
+    }
+
+    #map {
+
+        & #description {
+            display:none;
+        }
+
+        & legend {
+            width: 100% !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            border-left: 0 !important;
+            border-right: 0 !important;
+            margin-bottom: 0 !important;
+            border-bottom: 0 !important;
+            height: auto !important;
+        }
+    }
+
+    .navbar-toggle {
+        position:fixed;
+        right:0;
+        top:0;
+        z-index:100002;
+        background:white;
+    }
+
+    .navbar-fixed-top {
+        height:auto;
+        background:white;
+        height: auto;
+        z-index: 100001;
+
+        & .nav-pills {
+            float:none;
+            width:100%;
+            padding:30px;
+        }
+        & .nav-pills > li {
+            float:none;
+            background-color:white;
+
+            & a {
+                background-color:white;
+                color:black;
+                border:0px !important;
+                border-bottom: 1px double #E5E5E5 !important;
+            }
+
+            & a:hover {
+                color:black;
+                background:#efefef;
+                border-bottom: 1px double #E5E5E5 !important;
+            }
+
+
+        }
+    }
+
+
+}
+
 
