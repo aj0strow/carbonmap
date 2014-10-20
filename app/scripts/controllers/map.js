@@ -189,7 +189,7 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
                 cloudmade2: {
                     name: 'Cloudmade Tourist',
                     type: 'xyz',
-                    url: "http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$000[@40],$fff[hsl-saturation@40])[hsl-saturation@90]/{z}/{x}/{y}.png",
+                    url: "http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[@80],$fff[hsl-saturation@80],$bab8ab[hsl-color])[hsl-saturation]/{z}/{x}/{y}.png",
                 }
             }
         }
@@ -199,7 +199,7 @@ energyMap.factory('buildingsFactory', ['$http', function ($http) {
         var tilesDict = {
             openstreetmap: {
                 
-                url: "https://api.tiles.mapbox.com/v4/base.live-satellite+0.05x1.00;0.00x0.30;0.00x0.20;0.00x1.00,base.mapbox-streets+bg-73b5e6_scale-1_water-0.54x0.54;0.60x0.60;0.43x0.43;0.00x1.00_streets-0.57x0.57;0.00x0.40;1.00x0.28;0.00x0.00_landuse-0.55x0.55;0.70x0.70;0.38x0.78;0.00x1.00_buildings-0.56x0.56;0.70x0.70;0.43x0.83;0.00x1.00/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q&update=i0uil",
+                url: "https://api.tiles.mapbox.com/v4/base.live-satellite+0.16x0.16;0.00x0.00;0.50x1.00;0.00x1.00,base.mapbox-streets+scale-1_water-0.57x0.57;0.69x0.69;0.67x0.67;0.00x1.00_streets-0.00x1.00;0.00x1.00;1.00x0.00;0.00x0.00_landuse-0.00x1.00;0.00x1.00;0.00x1.00;0.00x0.00_buildings-0.00x1.00;0.00x1.00;0.00x1.00;0.00x0.00/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q&update=i0uil",
                 options: {
                     "attribution":  [
                 'Map tiles by <a href="http://stamen.com/">Stamen Design</a>, ',
