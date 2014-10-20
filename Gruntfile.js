@@ -18,6 +18,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -215,7 +216,6 @@ module.exports = function (grunt) {
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
-        root:'.',
         dest: '<%= yeoman.dist %>',
         flow: {
           html: {
@@ -319,13 +319,19 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'partials/*'
           ]
         }, {
           expand: true,
           cwd: '<%= yeoman.app %>/.tmp/images',
           dest: '<%= yeoman.dist %>/images',
-          src: ['generated/*']
+          src: ['generated/*',
+                'markerGreen.png',
+                'markerRed.png',
+                'markerGrey.png'
+          ]
+
         }]
       },
       styles: {

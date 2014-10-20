@@ -63,6 +63,7 @@ html {
 body {
     height:100%;
     font-family: $fontSerif;
+    background:#141414;
     & p {
         font-family:'minion-pro';
     }
@@ -70,6 +71,9 @@ body {
 
 .leaflet-bottom {
     display:none;
+}
+.leaflet-container {
+    background:#141414 !important;
 }
 .leaflet-div-icon {
     background: none !important;
@@ -214,8 +218,6 @@ body#state-map #mainPanel {
 }
 
 #mainPanel {
-    @include filter-gradient(#141414, #000000, horizontal); // IE6-9
-    @include background-image(linear-gradient(left, rgba(20,20,20,1) 0%,rgba(14,14,14,1) 30%,rgba(0,0,0,0) 100%));
     text-shadow: 0px 1px 0px rgba(0,0,0,1);
     padding-left:70px;
     color: #B3B3B3;
@@ -262,7 +264,7 @@ h3 {
     border:3px double rgba(255,255,255,0.8);
     margin:10px 0;
     box-shadow: 10px 10px 100px rgba(0,0,0,1);
-    background: rgba(19,19,19,0.7);
+    background: rgba(19,19,19,0.85);
     padding-top: 10px;
 
     & hr {
@@ -277,7 +279,7 @@ h3 {
         letter-spacing:1px;
         display:block;
         width:100%;
-        margin-bottom:0;
+        margin-bottom:10px;
         & small {
             opacity: 0.4;
             margin-top: 5px;
@@ -288,6 +290,7 @@ h3 {
         }
         &#best {
             font-size:16px;
+            margin-top:24px;
         }
     }
     & h4 {
@@ -299,6 +302,7 @@ h3 {
         position:relative;
         text-shadow:0px 3px 6px rgba(0,0,0,0.1);
         margin-bottom:0;
+        margin-top:-10px;
         & span {
             opacity:0.5;
         }
@@ -309,16 +313,16 @@ h3 {
             text-align:center;
             color:white;
             position:relative;
-            margin:10px 0 0 0;
-
+            margin:-10px 0 0 00;
             text-shadow:0px 3px 6px rgba(0,0,0,0.1);
         }
             & sup {
-            font-size:20px;
+            font-size:30px;
             position: absolute;
             top:20px;
-            margin-left:10px;
+            margin-left:4px;
             opacity:0.4;
+            font-weight:bold;
         }
     }
     & small {
@@ -329,6 +333,8 @@ h3 {
         display:block;
         width:100%;
         color: #aaa;
+        margin-top:-10px;
+        margin-bottom:8px;
     }
     & small:first-of-type {
         padding-top:0px;
@@ -374,7 +380,7 @@ h3 {
             margin-left: 4px;
             margin-right: 4px;
             min-height: 26px;
-            margin-top: 17px;
+            margin-top: 2px;
             margin-bottom: 5px;
         }
         & .red {
@@ -450,10 +456,10 @@ h3 {
                     & sup {
                         position: absolute;
                         margin-top: 13px;
-                        font-size: 50%;
+                        font-size: 80%;
                         opacity: 0.5;
                         top: 0;
-                        font-weight: normal;
+                        font-weight: bold;
                     }
                 }
             }
@@ -843,11 +849,11 @@ to prevent collapsing during animation*/
      }
 
         & .angular-leaflet-map, legend, #description, #mainPanel, footer {
-         -webkit-filter: blur(10px);
-         -moz-filter: blur(10px);
-         -o-filter: blur(10px);
-         -ms-filter: blur(10px);
-         filter: blur(10px); 
+         -webkit-filter: blur(2px);
+         -moz-filter: blur(2px);
+         -o-filter: blur(2px);
+         -ms-filter: blur(2px);
+         filter: blur(2px); 
      }
 }
 
@@ -884,6 +890,8 @@ section#about, section#whatIsCarbonSavings {
     }
 }
 
+
+
 #building {
         & .mapMarker {
         position:static !important
@@ -891,6 +899,9 @@ section#about, section#whatIsCarbonSavings {
         & .glyphicon-map-marker:before {
             content:'';
         }
+}
+.building .close {
+    visibility:visible;
 }
 
 .ui-view-container {
@@ -960,6 +971,7 @@ section#about, section#whatIsCarbonSavings {
         text-align: center;
         line-height: 13px;
         cursor:default;
+        margin-top:10px;
 
     }
     &  h6 a:hover {
@@ -1108,7 +1120,7 @@ section#about, section#whatIsCarbonSavings {
     }
 }
 
-section#whatIsCarbonSavings #awards {
+section#about #awards {
     display:none;
 }
 hr.small {
@@ -1121,7 +1133,21 @@ hr.small {
     }
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+opacity:0 !important;
+}
+body {
+    transition:all 2s ease-in-out;
+}
+
 @media screen and (max-width:767px) {
+
+    .navbar-toggle small {
+        font-family:'minion-pro';
+        top:-2px;
+        display:inline-block;
+        position:relative;
+    }
 
     [ui-sref='map.view'], [ui-sref="map.home"]  {
         visibility:visible;
@@ -1149,6 +1175,8 @@ hr.small {
     #awards {
         background: #141414;
         padding: 30px;
+        display:block !important;
+        border: 0px !important;
     }
 
     section#about, section#whatIsCarbonSavings {
@@ -1187,6 +1215,9 @@ hr.small {
     #state-mapbuilding #mainPanel {
         display:none;
     } 
+    #state-mapview #whatIsCarbonSavings, #state-mapview #about {
+        display:none;
+    }
 
     #state-mapwhatiscarbonsavings , #state-mapabout {
 
@@ -1233,7 +1264,7 @@ hr.small {
         left: 50%;
         position: absolute;
         margin-left: -45px;
-        top: -14px;
+        top: -2px;
     }
     #logo {
         padding: 21px;
@@ -1242,21 +1273,23 @@ hr.small {
         height:80px;
     }
     body #mainPanel {
-        margin: 0 auto 200% auto;
         width:100%;
         padding:0;
         border-bottom: 0px;
 
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkzJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(19,19,19,1) 80%, rgba(19,19,19,0.8) 93%, rgba(19,19,19,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(19,19,19,1)), color-stop(80%,rgba(19,19,19,1)), color-stop(93%,rgba(19,19,19,0.8)), color-stop(100%,rgba(19,19,19,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 93%,rgba(19,19,19,0) 100%); /* W3C */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d7LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjkyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkzJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEzMTMxMyIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(19,19,19,1) 90%, rgba(19,19,19,0.8) 93%, rgba(19,19,19,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(19,19,19,1)), color-stop(90%,rgba(19,19,19,1)), color-stop(97%,rgba(19,19,19,0.8)), color-stop(100%,rgba(19,19,19,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 80%,rgba(19,19,19,0.8) 97%,rgba(19,19,19,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 90%,rgba(19,19,19,0.8) 97%,rgba(19,19,19,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 90%,rgba(19,19,19,0.8) 97%,rgba(19,19,19,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(19,19,19,1) 0%,rgba(19,19,19,1) 90%,rgba(19,19,19,0.8) 97%,rgba(19,19,19,0) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb131313', endColorstr='#00131313',GradientType=0 ); /* IE6-8 */
 
+    }
+    #pusher {
+        height:220%;
     }
 
     .masthead {
