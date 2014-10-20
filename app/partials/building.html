@@ -27,7 +27,7 @@
           
            <br style="clear:both" />
           
-          <p><b>WEEKLY SAVINGS: <span ng-class="{ red: building.savings.lastMonth < 0, green: building.savings.lastMonth > 0 }"> {{ building.savings.lastMonth }}</span></b><small>%</small><br />{{ building.description }}</p>
+          <p><b>WEEKLY SAVINGS: <span ng-class="{ buildingRed: building.savings.lastMonth < 0, buildingGreen: building.savings.lastMonth > 0 }"> {{ building.savings.lastMonth }}</span></b><small>%</small><br />{{ building.description }}</p>
           
 
           

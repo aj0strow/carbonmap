@@ -902,6 +902,12 @@ section#about, section#whatIsCarbonSavings {
   position: relative;
 }
 
+.buildingRed {
+    color:rgb(219,50,65);
+}
+.buildingGreen {
+    color:#7CA81D;
+}
 #building [ui-view] section {
     width: 220px;
     position: absolute;
@@ -909,7 +915,7 @@ section#about, section#whatIsCarbonSavings {
     top: -160px;
     border-radius: 0;
     padding: 0px 10px 10px 10px;
-    background: rgba(253, 252, 241, 0.85);
+    background: rgba(253, 252, 241, 0.98);
     border: 3px double #191919;
 
     &  .close {
@@ -1192,9 +1198,13 @@ body {
         width:80%;
     }
 
+    section#about>div>.ng-scope, section#whatIsCarbonSavings>div>.ng-scope {
+border:  none !important;
+}
+
 
     div[ui-view="whatIsCarbonSavings"], div[ui-view="about"] {
-        background: white;
+        background: #fdfcf1;
     }
     #state-map #whatIsCarbonSavings, #state-map #about, #state-maphome #whatIsCarbonSavings, #state-maphome #about, #state-mapbuilding #whatIsCarbonSavings, #state-mapbuilding #about {
         display:none;
